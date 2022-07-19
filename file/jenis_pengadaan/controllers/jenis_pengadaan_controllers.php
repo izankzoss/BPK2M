@@ -5,7 +5,8 @@ $opsi = $_GET['action'];
 if ($opsi == "input") {
     $data = [
         'nama_barang' => $_POST['nama_barang'],
-        'jumlah_pengadaan' => $_POST['jumlah_pengadaan'],
+        'tgl_pengadaan' => $_POST['tgl_pengadaan'],
+        'jml_pengadaan' => $_POST['jml_pengadaan'],
         'sumber_pengadaan' => $_POST['sumber_pengadaan']
     ];
     $simpan = __simpan($db, "pengadaan", $data);
