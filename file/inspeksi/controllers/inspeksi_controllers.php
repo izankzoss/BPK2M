@@ -55,11 +55,11 @@ elseif ($opsi == "update") {
       $where = [
         'id_inspeksi' => $_POST['id']
       ];
-      $update = __update($db, "semester", $data, $where); 
+      $update = __update($db, "inspeksi", $data, $where); 
       if ($update) {
         ?>
         <script>
-        window.location.href ='admin.php?target=semester';
+        window.location.href ='admin.php?target=inspeksi';
       </script>
       <?php
   } else {
