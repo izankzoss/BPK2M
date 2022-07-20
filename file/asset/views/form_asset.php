@@ -51,37 +51,24 @@
             </div>
             <div class="mb-3">
                 <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    harga
+                    Harga
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <input type="text" name="harga" class="form-control" />
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Total
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="total" class="form-control" />
-                </div>
-            </div>
-            <?php
-            $jumlah = $_GET['jumlah'];
-            $harga = $_GET['harga'];
-            $total = $jumlah * $harga;
-            $total = $_POST['total'];
-            ?>
+
             <div class="mb-3">
                 <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Tanggal Terima
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="tgl_terima" class="form-control" />
+                    <input type="date" name="tgl_terima" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="submit" class="btn btn-succes btn-sm" value="simpan">
+                    <input type="submit" class="btn btn-success btn-sm" value="simpan">
                     <a href="admin.php?target=asset" class="btn btn-danger btn-sm">Kembali</a>
                 </div>
             </div>
