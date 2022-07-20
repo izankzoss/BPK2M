@@ -42,4 +42,29 @@ elseif ($opsi == "delete") {
 } 
 // end kondisi delete
 // start kondisi update
+
+elseif ($opsi == "update") { 
+    $data = [
+       'id_keadaan' => $_POST['id_keadaan'],
+      'no_asset' => $_POST['no_asset'],
+      'tgl_inspeksi' => $_POST['tgl_inspeksi'],
+      'tgl_inspeksi' => $_POST['tgl_inspeksi'],
+    'pelaksana' => $_POST['pelaksana']
+
+    ];
+      $where = [
+        'id_inspeksi' => $_POST['id']
+      ];
+      $update = __update($db, "semester", $data, $where); 
+      if ($update) {
+        ?>
+        <script>
+        window.location.href ='admin.php?target=semester';
+      </script>
+      <?php
+  } else {
+    echo "gagal update" . $db -> error;
+  }
+}
+// end kondisi update 
 ?>
