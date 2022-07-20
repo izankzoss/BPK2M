@@ -26,48 +26,37 @@
                         <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'cara' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=cara">
-                        <i class="fa-solid fa-book"></i>Cara</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'cara' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=cara">Cara</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi">
-                            <i class="fa-solid fa-graduation-cap"></i>Inspeksi</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi">Inspeksi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis">
-                            <i class="fa-solid fa-building-columns"></i>Jenis</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis">Jenis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis asset">
-                        <i class="fa-solid fa-book"></i>Jenis Asset</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis asset">Jenis Asset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan">
-                            <i class="fa-solid fa-graduation-cap"></i>Keadaan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan">Keadaan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'no registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=no registrasi">
-                            <i class="fa-solid fa-building-columns"></i>No Registrasi</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'no registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=no registrasi">No Registrasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan">
-                        <i class="fa-solid fa-book"></i>Pemusnahan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan">Pemusnahan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan">
-                            <i class="fa-solid fa-graduation-cap"></i>Pengadaan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan">Pengadaan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan">
-                            <i class="fa-solid fa-building-columns"></i>Perbaikan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan">Perbaikan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab">
-                        <i class="fa-solid fa-book"></i>Sebab</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab">Sebab</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'tempat' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=tempat">
-                            <i class="fa-solid fa-graduation-cap"></i>Tempat</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'tempat' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=tempat">Tempat</a>
                     </li>
                 </ul>
             </div>
