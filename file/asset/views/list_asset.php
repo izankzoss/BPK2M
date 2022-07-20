@@ -4,6 +4,10 @@
     </div>
     <div class="card-body">
         <?php
+        $jumlah = $_GET['JUMLAH'];
+        $harga = $_GET['HARGA'];
+        $total = $jumlah * $harga;
+        $total = $_POST['TOTAL'];
         $db = __database();
         //buat table
         echo "<a class='btn btn-primary btn-sm' href='admin.php?target=asset&action=form'>Tambah</a><br><br>";
@@ -28,15 +32,15 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['no_asset'] . "</td>
-            <td>" . $r['nm_barang'] . "</td>
-            <td>" . $r['spesifikasi'] . "</td>
-            <td>" . $r['jumlah'] . "</td>
-            <td>" . $r['harga'] . "</td>
-            <td>" . $r['total'] . "</td>
-            <td>" . $r['tgl_terima'] . "</td>
-            <td><a class='btn btn-success btn-sm' href='admin.php?target=asset&action=edit&id=" . $r['no_asset'] . "' >Edit</a></td>
-            <td><a class='btn btn-danger btn-sm' href='admin.php?target=asset&action=delete&id=" . $r['no_asset'] . "'>Hapus</a></td>
+            <td>" . $r['NO_ASSET'] . "</td>
+            <td>" . $r['NM_BARANG'] . "</td>
+            <td>" . $r['SPESIFIKASI'] . "</td>
+            <td>" . $r['JUMLAH'] . "</td>
+            <td>" . $r['HARGA'] . "</td>
+            <td>" . $r['TOTAL'] . "</td>
+            <td>" . $r['TGL_TERIMA'] . "</td>
+            <td><a class='btn btn-success btn-sm' href='admin.php?target=asset&action=edit&id=" . $r['NO_ASSET'] . "' >Edit</a></td>
+            <td><a class='btn btn-danger btn-sm' href='admin.php?target=asset&action=delete&id=" . $r['NO_ASSET'] . "'>Hapus</a></td>
             </tr>";
             $no++;
         }
