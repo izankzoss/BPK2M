@@ -9,37 +9,18 @@ $db = __database();
         <form method="post" action="admin.php?target=pengadaan&action=input" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Kode Barang
+                    No Barang
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="kode_barang" class="form-control" />
+                    <input type="text" name="no_barang" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Nama Barang
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="nama_barang" class="form-control" />
-                </div>
-            </div>
-            <div class="mb-3">
-            <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Tanggal Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <select name="tgl_pengadaan" id="tgl_pengadaan" class="form-select">
-                        <option value="">Pilih Tanggal</option>
-                        <?php
-                        $db = __database();
-                        $tanggal_data = __ambil($db, "tanggal", "*", $where);
-                        while ($s = $tanggal_data->fetch_array()) {
-                        ?>
-                            <option value="<?php echo $s['tgl_pengadaan']; ?>"><?php echo $s['tanggal']; ?></option>
-                        <?php
-                        }
-                        ?>
-                    </select>
+                    <input type="date" name="tgl_pengadaan" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">

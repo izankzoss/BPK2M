@@ -4,8 +4,7 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'kode_barang' => $_POST['kode_barang'],
-        'nama_barang' => $_POST['nama_barang'],
+        'no_barang' => $_POST['no_barang'],
         'tgl_pengadaan' => $_POST['tgl_pengadaan'],
         'jml_pengadaan' => $_POST['jml_pengadaan'],
         'sumber_pengadaan' => sha1($_POST['sumber_pengadaan'])
@@ -25,7 +24,7 @@ if ($opsi == "input") {
 //start delete
 elseif ($opsi == "delete") {
     $where = [
-        'kode_barang' => $_GET['id']
+        'no_barang' => $_GET['id']
     ];
     $delete = __delete($db, "pengadaan", $where);
     if ($delete) {
@@ -43,20 +42,20 @@ elseif ($opsi == "delete") {
 elseif ($opsi == "update") {
     if (!empty($_POST['sumber_pengadaan'])) {
         $data = [
-        'nama_barang' => $_POST['nama_barang'],
+        'no_barang' => $_POST['no_barang'],
         'tgl_pengadaan' => $_POST['tgl_pengadaan'],
         'jml_pengadaan' => $_POST['jml_pengadaan'],
         'sumber_pengadaan' => sha1($_POST['sumber_pengadaan'])
         ];
     } else {
         $data = [
-            'nama_barang' => $_POST['nama_barang'],
+            'no_barang' => $_POST['no_barang'],
             'tgl_pengadaan' => $_POST['tgl_pengadaan'],
             'jml_pengadaan' => $_POST['jml_pengadaan']
         ];
     }
     $where = [
-        'kode_barang' => $_POST['id']
+        'no_barang' => $_POST['id']
     ];
     $update = __update($db, "pengadaan", $data, $where);
     if ($update) {
