@@ -6,10 +6,10 @@ if ($opsi == "input") {
     $data = [
         'no_asset' => $_POST['no_asset'],
         'nm_barang' => $_POST['nm_barang'],
-        'jumlah' => $_POST['spesifikasi'],
+        'spesifikasi' => $_POST['spesifikasi'],
+        'jumlah' => $_POST['jumlah'],
         'harga' => $_POST['harga'],
-        'total' => $_POST['total'],
-        'tgl_terima' => $_POST['username']
+        'tgl_terima' => $_POST['tgl_terima']
     ];
     $simpan = __simpan($db, "asset", $data);
     if ($simpan) {
@@ -24,7 +24,7 @@ if ($opsi == "input") {
 }
 //end kondisi input
 //start kondisi delete
-elseif ($opsi = "delete") {
+elseif ($opsi == "delete") {
     $where = [
         'no_asset' => $_GET['id']
     ];
@@ -45,13 +45,13 @@ elseif ($opsi = "delete") {
 elseif ($opsi == "update") {
     $data = [
         'nm_barang' => $_POST['nm_barang'],
-        'jumlah' => $_POST['spesifikasi'],
+        'spesifikasi' => $_POST['spesifikasi'],
+        'jumlah' => $_POST['jumlah'],
         'harga' => $_POST['harga'],
-        'total' => $_POST['total'],
         'tgl_terima' => $_POST['tgl_terima']
     ];
     $where = [
-        'no_asset' => $_POST['id']
+        'NO_ASSET' => $_POST['id']
     ];
     $update = __update($db, "asset", $data, $where);
     if ($update) {
