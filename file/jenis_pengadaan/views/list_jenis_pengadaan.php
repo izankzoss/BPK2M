@@ -31,14 +31,14 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['no_barang'] . "</td>
+            <td>" . $r['nama_barang'] . "</td>
             <td>" . $r['tanggal'] . "</td>
             <td>" . $r['nama_jumlah'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['no_barang'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['no_barang'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['no_pengadaan'] . "'>
                 <i class='fa-solid fa-trash'></i>
                 </a>
             </td>
