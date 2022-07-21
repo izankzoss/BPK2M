@@ -48,7 +48,6 @@ elseif ($opsi == "update") {
        'id_keadaan' => $_POST['id_keadaan'],
       'no_asset' => $_POST['no_asset'],
       'tgl_inspeksi' => $_POST['tgl_inspeksi'],
-      'tgl_inspeksi' => $_POST['tgl_inspeksi'],
     'pelaksana' => $_POST['pelaksana']
 
     ];
