@@ -1,26 +1,28 @@
 <?php
-	include "config/config_url.php";
-	include "config/config_database.php";
+include "config/__config_url.php";
+include "config/__config_database.php";
 
- ?>
- 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to- fit=no">
-        <title>Aplikasi BPK2M</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.datables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">Aplikasi BPK2M</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data- target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria- expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to- fit=no">
+    <title>Aplikasi BPK2M</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Aplikasi BPK2M</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data- target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria- expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
@@ -35,7 +37,8 @@
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis">Jenis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis asset">Jenis Asset</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis asset">
+                            <i class="fa-solid fa-book"></i>Jenis Asset</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan">Keadaan</a>
@@ -62,12 +65,12 @@
             </div>
         </div>
     </nav>
-<div class="clearfix">&nbsp;</div>
-<div class="container">
-<?php include_once "content.php"; ?>
-</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="container">
+        <?php include_once "content.php"; ?>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js">
-</script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0- beta1/dist/js/bootstrap.min.js"></script>
 </body>
 
