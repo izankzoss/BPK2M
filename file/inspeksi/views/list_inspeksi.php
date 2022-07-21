@@ -7,12 +7,12 @@
     $db = __database();
     // buat header table
     echo "<a class='btn btn-primary btn-sm' href='admin.php?
-target=insepeksi&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
+target=inspeksi&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
       echo "<div class='table-responsive'>";
       echo "<table class='table table-striped table-bordered'>
       <thead>
       <tr>
-      <th>No Asset</th><th>Id Inspeksi</th><th>Id Keadaan</th><th>Tanggal Inpeksi</th><th><Pelaksana/th>
+      <th>No Asset</th><th>Id Inspeksi</th><th>Id Keadaan</th><th>Tanggal Inpeksi</th><th>Pelaksana</th>
       </tr>
       </thead>
       <tbody>";
