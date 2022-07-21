@@ -3,7 +3,7 @@
     <h4>Form Inspeksi</h4>
     </div>
     <div class="card-body">
-      <form method="post" action="admin.php?target=prodi&action=input" data-parsley-validate
+      <form method="post" action="admin.php?target=inspeksi&action=input" data-parsley-validate
        class="form-horizontal form-label-left">
        <div class="mb-3">
         <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
