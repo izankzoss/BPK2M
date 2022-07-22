@@ -4,6 +4,7 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
+        'id_tempat' => $_POST['id_tempat'],
         'tmp_simpan' => $_POST['tmp_simpan'],
         'ket_tempat' => $_POST['ket_tempat'],
         'password' => sha1($_POST['password'])
@@ -23,7 +24,7 @@ if ($opsi == "input") {
 //start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'tmp_simpan' => $_GET['id']
+        'id_tempat' => $_GET['id']
     ];
     $delete = __delete($db, "tempat", $where);
     if ($delete) {
@@ -41,16 +42,18 @@ elseif ($opsi == "delete") {
 elseif ($opsi == "update") {
     if (!empty($_POST['password'])) {
         $data = [
+            'tmp_simpan' => $_POST['tmp_simpan'],
             'ket_tempat' => $_POST['ket_tempat'],
             'password' => sha1($_POST['password'])
         ];
     } else {
         $data = [
+            'tmp_simpan' => $_POST['tmp_simpan'],
             'ket_tempat' => $_POST['ket_tempat']
         ];
     }
     $where = [
-        'tmp_simpan' => $_POST['id']
+        'id_tempat' => $_POST['id']
     ];
     $update = __update($db, "tempat", $data, $where);
     if ($update) {

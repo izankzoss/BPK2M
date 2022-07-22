@@ -11,7 +11,7 @@
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>Tempat Simpan</th><th>Keterangan</th><th>#</th>
+            <th>No</th><th>Id Tempat</th><th>Tempat Simpan</th><th>Keterangan Tempat</th><th>#</th>
         </tr>
         </thead>
         <tbody>";
@@ -21,13 +21,14 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
+            <td>" . $r['id_tempat'] . "</td>
             <td>" . $r['tmp_simpan'] . "</td>
-            <td>" . $r['nama_simpan'] . "</td>
+            <td>" . $r['ket_tempat'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=tempat&action=edit&id=" . $r['tmp_simpan'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=tempat&action=edit&id=" . $r['id_tempat'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=tempat&action=delete&id=" . $r['tmp_simpan'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=tempat&action=delete&id=" . $r['id_tempat'] . "'>
                 <i class='fa-solid fa-trash'></i>
                 </a>
             </td>

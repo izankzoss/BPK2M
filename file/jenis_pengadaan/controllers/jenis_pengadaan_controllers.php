@@ -4,10 +4,12 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'no_barang' => $_POST['no_barang'],
+        'id_pengadaan' => $_POST['id_pengadaan'],
+        'nmr_barang' => $_POST['nmr_barang'],
         'tgl_pengadaan' => $_POST['tgl_pengadaan'],
         'jml_pengadaan' => $_POST['jml_pengadaan'],
-        'sumber_pengadaan' => sha1($_POST['sumber_pengadaan'])
+        'sumber_pengadaan' => $_POST['sumber_pengadaan'],
+        'password' => sha1($_POST['password'])
     ];
     $simpan = __simpan($db, "pengadaan", $data);
     if ($simpan) {
@@ -20,11 +22,11 @@ if ($opsi == "input") {
         echo "gagal simpan " . $db->error;
     }
 }
-//end input
-//start delete
+// end kondisi input
+//start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'no_barang' => $_GET['id']
+        'npm' => $_GET['id']
     ];
     $delete = __delete($db, "pengadaan", $where);
     if ($delete) {
@@ -34,28 +36,28 @@ elseif ($opsi == "delete") {
         </script>
     <?php
     } else {
-        echo "gagal hapus" . $db->error;
+        echo "gagal hapus " . $db->error;
     }
 }
-//end delete
-//start update
+//end kondisi delete
+//start kondisi update
 elseif ($opsi == "update") {
-    if (!empty($_POST['sumber_pengadaan'])) {
+    if (!empty($_POST['password'])) {
         $data = [
-        'no_barang' => $_POST['no_barang'],
-        'tgl_pengadaan' => $_POST['tgl_pengadaan'],
-        'jml_pengadaan' => $_POST['jml_pengadaan'],
-        'sumber_pengadaan' => sha1($_POST['sumber_pengadaan'])
+            'nmr_barang' => $_POST['nmr_barang'],
+            'tgl_pengadaan' => $_POST['tgl_pengadaan'],
+            'jml_pengadaan' => $_POST['jml_pengadaan'],
+            'password' => sha1($_POST['password'])
         ];
     } else {
         $data = [
-            'no_barang' => $_POST['no_barang'],
+            'nmr_barang' => $_POST['nmr_barang'],
             'tgl_pengadaan' => $_POST['tgl_pengadaan'],
             'jml_pengadaan' => $_POST['jml_pengadaan']
         ];
     }
     $where = [
-        'no_barang' => $_POST['id']
+        'id_pengadaan' => $_POST['id']
     ];
     $update = __update($db, "pengadaan", $data, $where);
     if ($update) {
@@ -69,5 +71,5 @@ elseif ($opsi == "update") {
         echo "gagal update" . $db->error;
     }
 }
-//end update
+//end kondisi update
 ?>

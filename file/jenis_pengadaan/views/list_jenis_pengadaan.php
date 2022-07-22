@@ -14,31 +14,33 @@
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>No Barang</th><th>Tanggal Pengadaan</th><th>Jumlah Pengadaan</th><th>#</th>
+            <th>No</th><th>Id Pengadaan</th><th>No Barang</th><th>Tanggal Pengadaan</th><th>Jumlah Pengadaan</th><th>Sumber Pengadaan</th><th>#</th>
         </tr>
         </thead>
         <tbody>";
         // ambil data dari database
         $join =[
-            "LEFT JOIN tanggal as p on p.tgl_pengadaan=m.tgl_pengadaan",
-            "LEFT JOIN jumlah as s on s.jml_pengadaan=m.jml_pengadaan"
+            "LEFT JOIN jml pengadaan as p on p.jml_pengadaan=m.jml_pengadaan",
+            "LEFT JOIN tgl pengadaan as s on s.tgl_pengadaan=m.tgl_pengadaan"
         ];
         $where = [
-            'm.tgl_pengadaan' => $_SESSION['id']
+            'm.jml_pengadaan' => $_SESSION['id']
         ];
         $q = __ambil($db, "pengadaan as m", "*", null, $join);
         $no = 1;
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['nama_barang'] . "</td>
-            <td>" . $r['tanggal'] . "</td>
-            <td>" . $r['nama_jumlah'] . "</td>
+            <td>" . $r['id_pengadaan'] . "</td>
+            <td>" . $r['nmr_barang'] . "</td>
+            <td>" . $r['tgl_pengadaan'] . "</td>
+            <td>" . $r['jml_pengadaan'] . "</td>
+            <td>" . $r['sumber_pengadaan'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['no_barang'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['id_pengadaan'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['no_pengadaan'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['id_pengadaan'] . "'>
                 <i class='fa-solid fa-trash'></i>
                 </a>
             </td>

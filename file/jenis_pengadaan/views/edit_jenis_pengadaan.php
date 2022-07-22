@@ -1,7 +1,7 @@
 <?php
 $db = __database();
 $where = [
-    'no_barang' => $_GET['id']
+    'id_pengadaan' => $_GET['id']
 ];
 $query     = __ambil($db, "pengadaan", "*", $where);
 //menampilkan hasil query dalam bentuk object
@@ -17,18 +17,26 @@ $rows       = $query->fetch_object();
         <form method="post" action="admin.php?target=pengadaan&action=input" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    No Barang
+                    Id Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="no_barang" class="form-control" value="<?php echo $rows->no_barang; ?>" />
+                    <input type="text" name="id_pengadaan" class="form-control" value="<?php echo $rows->id_pengadaan; ?>" />
                 </div>
             </div>
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Tangga Pengadaan
+                    No Barang
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="date" name="tgl_pengadaan" class="form-control" />
+                    <input type="text" name="nmr_barang" class="form-control" value="<?php echo $rows->nmr_barang; ?>" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Tanggal Pengadaan
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="date" name="tgl_pengadaan" class="form-control" value="<?php echo $rows->tgl_pengadaan; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -36,22 +44,7 @@ $rows       = $query->fetch_object();
                     Jumlah Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <select name="jml_pengadaan" id="jml_pengadaan" class="form-select">
-                        <option value="">Pilih Jumlah</option>
-                        <?php
-                        $where_jumlah = [
-                            'jml_pengadaan' => $_SESSION['id']
-                        ];
-                        $jumlah_data = __ambil($db, "jumlah", "*", $where_jumlah);
-                        while ($r = $jumlah_data->fetch_array()) {
-                        ?>
-                            <option value="<?php echo $r['jml_pengadaan']; ?>" <?php echo $r['jml_pengadaan'] == $rows->jml_pengadaan ? "selected" : "" ?>>
-                                <?php echo $r['jml_pengadaan']; ?>
-                            </option>
-                        <?php
-                        }
-                        ?>
-                    </select>
+                    <input type="text" name="jml_pengadaan" class="form-control" value="<?php echo $rows->jml_pengadaan; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -59,7 +52,15 @@ $rows       = $query->fetch_object();
                     Sumber Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="sumber_pengadaan" name="sumber_pengadaan" class="form-control" /> * KOSONGKAN JIKA TIDAK DIRUBAH
+                    <input type="text" name="sumber_pengadaan" class="form-control" value="<?php echo $rows->sumber_pengadaan; ?>" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Password
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="password" name="password" class="form-control" /> * KOSONGKAN JIKA TIDAK DIRUBAH
                 </div>
             </div>
             <div class="mb-3">
