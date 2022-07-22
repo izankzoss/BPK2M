@@ -3,7 +3,7 @@
         <h4>Form Tempat</h4>
     </div>
     <div class="card-body">
-        <form method="post" action="admin.php?target=Tempat&action=input" data-parsley-validate class="form-horizontal form-label-left">
+        <form method="post" action="admin.php?target=tempat&action=input" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Id Tempat
