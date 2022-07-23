@@ -12,7 +12,7 @@ target=inspeksi&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>"
       echo "<table class='table table-striped table-bordered'>
       <thead>
       <tr>
-      <th>No Asset</th><th>Id Inspeksi</th><th>Id Keadaan</th><th>Tanggal Inpeksi</th><th>Pelaksana</th>
+      <th>Id Inspeksi</th>><th>Tanggal</th><th>Pelaksana</th>
       </tr>
       </thead>
       <tbody>";
@@ -21,9 +21,8 @@ target=inspeksi&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>"
       $no = 1;
       while ($r = $q->fetch_array()) {
         echo "<tr>
-       <td>" . $r['no_asset'] . "</td>
+       
         <td>" . $r['id_inspeksi'] . "</td>
-        <td>" . $r['id_keadaan'] . "</td>
         <td>" . $r['tgl_inspeksi'] . "</td>
         <td>" . $r['pelaksana'] . "</td>
         <td>
