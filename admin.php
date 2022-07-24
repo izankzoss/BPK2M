@@ -28,6 +28,9 @@ include "config/__config_database.php";
                         <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset">Asset</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'cara' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=cara_pemusnahan">Cara Pemusnahan</a>
                     </li>
                     <li class="nav-item">
