@@ -45,7 +45,7 @@ elseif ($opsi == "update") {
         'ket_cara' => $_POST['ket_cara']
     ];
     $where = [
-        'ket_cara' => $_POST['id']
+        'id_cara' => $_POST['id']
     ];
     $update = __update($db, "cara_pemusnahan", $data, $where);
     if ($update) {
