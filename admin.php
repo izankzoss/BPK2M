@@ -1,6 +1,6 @@
 <?php
-include "config/__config_url.php";
-include "config/__config_database.php";
+include "__config/__config_url.php";
+include "__config/__config_database.php";
 
 ?>
 
