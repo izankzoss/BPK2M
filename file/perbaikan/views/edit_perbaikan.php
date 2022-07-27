@@ -45,7 +45,7 @@ $rows = $query->fetch_object();
                     Biaya
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="biaya" type="text" name="biaya" class="form-control" value="<?php echo $rows->ket_perbaikan; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input id="biaya" type="text" name="biaya" class="form-control" value="<?php echo $rows->biaya; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
