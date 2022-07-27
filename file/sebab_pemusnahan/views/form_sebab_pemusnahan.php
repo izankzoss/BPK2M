@@ -3,7 +3,7 @@
         <h4>Form Sebab</h4>
     </div>
     <div class="card-body">
-        <form method="post" action="admin.php?target=sebab_pemsunahan&action=input" data-parsley-validate class="form-horizontal form-label-left">
+        <form method="post" action="admin.php?target=sebab_pemusnahan&action=input" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Id Sebab

@@ -6,7 +6,7 @@
         <?php
         $db = __database();
         // buat header table
-        echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=pengadaan&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
+        echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=jenis_pengadaan&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
         <a class='btn btn-warning btn-sm text-dark' href='#'><i class='fa-solid fa-print'></i> PrintOut Data</a>
         <a class='btn btn-primary btn-sm text-light' href='#'><i class='fa-solid fa-cloud-arrow-down'></i> Export Data</a>
         <br><br>";
@@ -26,7 +26,7 @@
         $where = [
             'm.jml_pengadaan' => $_SESSION['id']
         ];
-        $q = __ambil($db, "pengadaan as m", "*", null, $join);
+        $q = __ambil($db, "jenis_pengadaan as m", "*", null, $join);
         $no = 1;
         while ($r = $q->fetch_array()) {
             echo "<tr>
@@ -37,10 +37,10 @@
             <td>" . $r['jml_pengadaan'] . "</td>
             <td>" . $r['sumber_pengadaan'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['id_pengadaan'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=jenis_pengadaan&action=edit&id=" . $r['id_pengadaan'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['id_pengadaan'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=jenis_pengadaan&action=delete&id=" . $r['id_pengadaan'] . "'>
                 <i class='fa-solid fa-trash'></i>
                 </a>
             </td>

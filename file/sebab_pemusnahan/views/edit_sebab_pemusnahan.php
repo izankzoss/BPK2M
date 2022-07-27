@@ -38,7 +38,7 @@ $rows       = $query->fetch_object();
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
                         <i class="fa-solid fa-floppy-disk"></i> Simpan
                     </button>
-                    <a class="btn btn-danger btn-sm" href="admin.php?target=sebab"> <i class="fa-solid fa-circle-arrow-left"></i> Kembali</a>
+                    <a class="btn btn-danger btn-sm" href="admin.php?target=sebab_pemusnahan"> <i class="fa-solid fa-circle-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </form>

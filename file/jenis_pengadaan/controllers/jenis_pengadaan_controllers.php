@@ -11,11 +11,11 @@ if ($opsi == "input") {
         'sumber_pengadaan' => $_POST['sumber_pengadaan'],
         'password' => sha1($_POST['password'])
     ];
-    $simpan = __simpan($db, "pengadaan", $data);
+    $simpan = __simpan($db, "jenis_pengadaan", $data);
     if ($simpan) {
 ?>
         <script>
-            window.location.href = 'admin.php?target=pengadaan';
+            window.location.href = 'admin.php?target=jenis_pengadaan';
         </script>
     <?php
     } else {
@@ -28,11 +28,11 @@ elseif ($opsi == "delete") {
     $where = [
         'npm' => $_GET['id']
     ];
-    $delete = __delete($db, "pengadaan", $where);
+    $delete = __delete($db, "jenis_pengadaan", $where);
     if ($delete) {
     ?>
         <script>
-            window.location.href = 'admin.php?target=pengadaan';
+            window.location.href = 'admin.php?target=jenis_pengadaan';
         </script>
     <?php
     } else {
@@ -59,12 +59,12 @@ elseif ($opsi == "update") {
     $where = [
         'id_pengadaan' => $_POST['id']
     ];
-    $update = __update($db, "pengadaan", $data, $where);
+    $update = __update($db, "jenis_pengadaan", $data, $where);
     if ($update) {
 
     ?>
         <script>
-            window.location.href = 'admin.php?target=pengadaan';
+            window.location.href = 'admin.php?target=jenis_pengadaan';
         </script>
 <?php
     } else {

@@ -41,7 +41,7 @@ include "config/__config_database.php";
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pemusnahan">
-                            <i class="fa-solid fa-book"></i>Jenis Asset</a>
+                            <i class="fa-solid fa-book"></i>Jenis Pemusnahan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan">Keadaan</a>
@@ -53,16 +53,13 @@ include "config/__config_database.php";
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan">Pemusnahan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan">Pengadaan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pengadaan">Pengadaan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan">Perbaikan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab_pemusnahan">Sebab</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'tempat' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=tempat">Tempat</a>
                     </li>
                 </ul>
             </div>
