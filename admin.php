@@ -1,6 +1,6 @@
 <?php
-	include "__config/config_url.php";
-	include "__config/config_database.php";
+	include "config/config_url.php";
+	include "config/config_database.php";
 
  ?>
 <!DOCTYPE html>
