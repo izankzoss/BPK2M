@@ -4,12 +4,9 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'id_pengadaan' => $_POST['id_pengadaan'],
-        'nmr_barang' => $_POST['nmr_barang'],
-        'tgl_pengadaan' => $_POST['tgl_pengadaan'],
-        'jml_pengadaan' => $_POST['jml_pengadaan'],
-        'sumber_pengadaan' => $_POST['sumber_pengadaan'],
-        'password' => sha1($_POST['password'])
+        'id_jenis' => $_POST['id_jenis'],
+        'jenis_pengadaan' => $_POST['jenis_pengadaan'],
+        'ket_jenis' => $_POST['ket_jenis']
     ];
     $simpan = __simpan($db, "jenis_pengadaan", $data);
     if ($simpan) {
@@ -26,7 +23,7 @@ if ($opsi == "input") {
 //start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'npm' => $_GET['id']
+        'id_jenis' => $_GET['id']
     ];
     $delete = __delete($db, "jenis_pengadaan", $where);
     if ($delete) {
@@ -42,22 +39,12 @@ elseif ($opsi == "delete") {
 //end kondisi delete
 //start kondisi update
 elseif ($opsi == "update") {
-    if (!empty($_POST['password'])) {
         $data = [
-            'nmr_barang' => $_POST['nmr_barang'],
-            'tgl_pengadaan' => $_POST['tgl_pengadaan'],
-            'jml_pengadaan' => $_POST['jml_pengadaan'],
-            'password' => sha1($_POST['password'])
+            'jenis_pengadaan' => $_POST['jenis_pengadaan'],
+            'ket_jenis' => $_POST['ket_jenis']
         ];
-    } else {
-        $data = [
-            'nmr_barang' => $_POST['nmr_barang'],
-            'tgl_pengadaan' => $_POST['tgl_pengadaan'],
-            'jml_pengadaan' => $_POST['jml_pengadaan']
-        ];
-    }
     $where = [
-        'id_pengadaan' => $_POST['id']
+        'id_jenis' => $_POST['id']
     ];
     $update = __update($db, "jenis_pengadaan", $data, $where);
     if ($update) {

@@ -40,6 +40,9 @@ include "config/__config_database.php";
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset">Jenis Asset</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pengadaan">Jenis Pengadaan</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pemusnahan">
                             <i class="fa-solid fa-book"></i>Jenis Pemusnahan</a>
                     </li>
@@ -53,7 +56,7 @@ include "config/__config_database.php";
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan">Pemusnahan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pengadaan">Pengadaan</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan">Pengadaan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan">Perbaikan</a>

@@ -1,6 +1,6 @@
 <?php
 
-function __database($host = "localhost", $user = "root", $pass = "", $db = "bpk2m")
+function __database($host = "localhost", $user = "root", $pass = "", $db = "baru")
 {
     $sambung = new mysqli($host, $user, $pass, $db);
     if (!$sambung) {
