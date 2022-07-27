@@ -59,7 +59,7 @@ include "config/__config_database.php";
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan">Perbaikan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab">Sebab</a>
+                        <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab_pemusnahan">Sebab</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'tempat' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=tempat">Tempat</a>

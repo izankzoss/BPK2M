@@ -22,7 +22,7 @@ function getContentAdmin($url, $target, $action = null)
             @include($selectedfile);
         } elseif ($action == "delete" or $action == "input" or $action == "update") {
             $selectedfile = $selectedfolder . "controllers/" . $target . "_controllers.php";
-            include($selectedfile);
+            @include($selectedfile);
         } else {
 ?>
             <div class="col-md-12 col-sm-12 col-xs-12">
