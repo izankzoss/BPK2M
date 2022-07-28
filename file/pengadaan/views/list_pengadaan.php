@@ -24,16 +24,16 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['id_pengadaan'] . "</td>
-            <td>" . $r['tgl_pengadaan'] . "</td>
-            <td>" . $r['jml_pengadaan'] . "</td>
-            <td>" . $r['sumber_pengadaan'] . "</td>
+            <td>" . $r['ID_PENGADAAN'] . "</td>
+            <td>" . $r['TGL_PENGADAAN'] . "</td>
+            <td>" . $r['JML_PENGADAAN'] . "</td>
+            <td>" . $r['SUMBER_PENGADAAN'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['id_pengadaan'] . "'>
-                <i class='fa-solid fa-pen-to-square'></i>
+                <a class='btn btn-success btn-sm' href='admin.php?target=pengadaan&action=edit&id=" . $r['ID_PENGADAAN'] . "'>
+                <i class='fa-solid fa-pen-to-square'>Edit</i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['id_pengadaan'] . "'>
-                <i class='fa-solid fa-trash'></i>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=pengadaan&action=delete&id=" . $r['ID_PENGADAAN'] . "'>
+                <i class='fa-solid fa-trash'>Hapus</i>
                 </a>
             </td>
         </tr>";
