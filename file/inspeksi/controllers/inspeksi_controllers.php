@@ -4,9 +4,9 @@ $opsi = $_GET['action'];
 // start input
 if ($opsi == "input") {
     $data = [
-        
-        'tgl_inspeksi' => $_POST['tgl_inspeksi'],
-        'pengadaan' => $_POST['pengadaan']
+        'ID_INSPEKSI' => $_POST['ID_INSPEKSI'],
+        'TGL_INSPEKSI' => $_POST['TGL_INSPEKSI'],
+        'PELAKSANA' => $_POST['PELAKSANA']
     ];
     $simpan = __simpan($db, "inspeksi", $data);
     if ($simpan){
@@ -23,7 +23,7 @@ if ($opsi == "input") {
 // start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'tgl_inspeksi' => $_GET['id']
+        'ID_INSPEKSI' => $_GET['id']
     ];
     $delete = __delete($db, "inspeksi", $where);
     if ($delete) {
@@ -40,10 +40,11 @@ elseif ($opsi == "delete") {
 // start kondisi update
 elseif ($opsi == "update") {
     $data = [
-        'pengadaan' => $_POST['pengadaan']
+        'TGL_INSPEKSI' => $_POST['TGL_INSPEKSI'],
+        'PELAKSANA' => $_POST['PELAKSANA']
     ];
     $where = [
-        'tgl_inspeksi' => $_POST['id']
+        'ID_INSPEKSI' => $_POST['id']
     ];
     $update = __update($db, "inspeksi", $data, $where);
     if ($update) {
