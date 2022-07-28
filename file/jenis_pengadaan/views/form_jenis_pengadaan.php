@@ -28,7 +28,7 @@ $db = __database();
                     Keterangan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="integer" name="ket_jenis" class="form-control" />
+                    <input type="text" name="ket_jenis" class="form-control" />
                 </div>
             </div>
             
