@@ -29,8 +29,8 @@
             <td>" . $r['TGL_INSPEKSI'] . "</td>
             <td>" . $r['PELAKSANA'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=inspeksi&action=edit&id=" . $r['tgl_inspeksi'] . "'><i class='fa-solid fa-pen-to-square'></i>Edit</a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=inspeksi&action=delete&id=" . $r['tgl_inspeksi'] . "'><i class='fa-solid fa-trash'></i>Hapus</a>
+                <a class='btn btn-success btn-sm' href='admin.php?target=inspeksi&action=edit&id=" . $r['ID_INSPEKSI'] . "'><i class='fa-solid fa-pen-to-square'></i>Edit</a>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=inspeksi&action=delete&id=" . $r['ID_INSPEKSI'] . "'><i class='fa-solid fa-trash'></i>Hapus</a>
             </td>
         </tr>";
             $no++;
