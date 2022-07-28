@@ -9,18 +9,26 @@ $db = __database();
     <form method="post" action="admin.php?target=inspeksi&action=input" data-parsley-validate class="form-horizontal form-label-left">
     <div class="mb-3">
             <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-               Tanggal
+               Id Inspeksi
             </label>
             <div class="col-md-6 col-sm-6 col-lg-12">
-                <input type="date" name="tanggal" class="form-control" />
+                <input type="text" name="ID_INSPEKSI" class="form-control" />
             </div> 
         </div> 
     <div class="mb-3">
             <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                Pengadaan
+               Tanggal
             </label>
             <div class="col-md-6 col-sm-6 col-lg-12">
-                <input type="text" name="pengadaan" class="form-control" />
+                <input type="date" name="TGL_INSPEKSI" class="form-control" />
+            </div> 
+        </div> 
+    <div class="mb-3">
+            <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                Pelaksana
+            </label>
+            <div class="col-md-6 col-sm-6 col-lg-12">
+                <input type="text" name="PELAKSANA" class="form-control" />
             </div> 
         </div>
             <div class="mb-3">
