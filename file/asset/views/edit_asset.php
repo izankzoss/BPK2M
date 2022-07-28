@@ -21,7 +21,7 @@ $rows = $query->fetch_object();
                     Nama Barang
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="kd_prodi" type="text" name="nm_barang" class="form-control" value="<?php echo $rows->nm_barang; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input id="NM_BARANG" type="text" name="NM_BARANG" class="form-control" value="<?php echo $rows->NM_BARANG; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -48,7 +48,7 @@ $rows = $query->fetch_object();
                     Jumlah
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="jumlah" type="text" name="jumlah" class="form-control" value="<?php echo $rows->jumlah; ?>" class="form-control col-md-7 col-xs-12">
+                    <input id="jumlah" type="text" name="JUMLAH" class="form-control" value="<?php echo $rows->JUMLAH; ?>" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -56,7 +56,7 @@ $rows = $query->fetch_object();
                     Harga
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="jumlah" type="text" name="harga" class="form-control" value="<?php echo $rows->harga; ?>" class="form-control col-md-7 col-xs-12">
+                    <input id="jumlah" type="text" name="HARGA" class="form-control" value="<?php echo $rows->HARGA; ?>" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -64,7 +64,7 @@ $rows = $query->fetch_object();
                     Tanggal Terima
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="jumlah" type="date" name="tgl_terima" class="form-control" value="<?php echo $rows->tgl_terima; ?>" class="form-control col-md-7 col-xs-12">
+                    <input id="jumlah" type="date" name="TGL_TERIMA" class="form-control" value="<?php echo $rows->TGL_TERIMA; ?>" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
