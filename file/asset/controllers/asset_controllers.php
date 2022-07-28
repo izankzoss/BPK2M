@@ -4,12 +4,12 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'no_asset' => $_POST['no_asset'],
-        'nm_barang' => $_POST['nm_barang'],
-        'spesifikasi' => $_POST['spesifikasi'],
-        'jumlah' => $_POST['jumlah'],
-        'harga' => $_POST['harga'],
-        'tgl_terima' => $_POST['tgl_terima']
+        'NO_ASSET' => $_POST['NO_ASSET'],
+        'NM_BARANG' => $_POST['NM_BARANG'],
+        'SPESIFIKASI' => $_POST['SPESIFIKASI'],
+        'JUMLAH' => $_POST['JUMLAH'],
+        'HARGA' => $_POST['HARGA'],
+        'TGL_TERIMA' => $_POST['TGL_TERIMA']
     ];
     $simpan = __simpan($db, "asset", $data);
     if ($simpan) {
@@ -26,7 +26,7 @@ if ($opsi == "input") {
 //start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'no_asset' => $_GET['id']
+        'NO_ASSET' => $_GET['id']
     ];
     $delete = __delete($db, "asset", $where);
     if ($delete) {
@@ -44,11 +44,11 @@ elseif ($opsi == "delete") {
 //start update
 elseif ($opsi == "update") {
     $data = [
-        'nm_barang' => $_POST['nm_barang'],
-        'spesifikasi' => $_POST['spesifikasi'],
-        'jumlah' => $_POST['jumlah'],
-        'harga' => $_POST['harga'],
-        'tgl_terima' => $_POST['tgl_terima']
+        'NM_BARANG' => $_POST['NM_BARANG'],
+        'SPESIFIKASI' => $_POST['SPESIFIKASI'],
+        'JUMLAH' => $_POST['JUMLAH'],
+        'HARGA' => $_POST['HARGA'],
+        'TGL_TERIMA' => $_POST['TGL_TERIMA']
     ];
     $where = [
         'NO_ASSET' => $_POST['id']
