@@ -1,20 +1,22 @@
 <div class="card">
     <div class="card-header">
-        <h4><i class="fa-solid fa-database"></i> Data Jenis Pengadaan</h4>
+        <h4><i class="fa-solid fa-database"></i>Jenis Pengadaan</h4>
     </div>
     <div class="card-body">
         <?php
         $db = __database();
         // buat header table
         echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=jenis_pengadaan&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
-        <a class='btn btn-warning btn-sm text-dark' href='#'><i class='fa-solid fa-print'></i> PrintOut Data</a>
-        <a class='btn btn-primary btn-sm text-light' href='#'><i class='fa-solid fa-cloud-arrow-down'></i> Export Data</a>
         <br><br>";
         echo "<div class='table-responsive'>";
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>Id Jenis</th><th>Jenis Pengadaan</th><th>Keterangan</th><th>#</th>
+            <th>No</th>
+            <th>Id Jenis</th>
+            <th>Jenis Pengadaan</th>
+            <th>Keterangan</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>";
