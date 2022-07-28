@@ -12,9 +12,10 @@
         <thead>
         <tr>
             <th>No</th>
-            <th>tanggal</th>
-            <th>pelaksana</th>
-            <th>#</th>
+            <th>Id Inspeksi</th>
+            <th>Tanggal</th>
+            <th>Pelaksana</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>";
@@ -24,8 +25,9 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['tgl_inspeksi'] . "</td>
-            <td>" . $r['pengadaan'] . "</td>
+            <td>" . $r['ID_INSPEKSI'] . "</td>
+            <td>" . $r['TGL_INSPEKSI'] . "</td>
+            <td>" . $r['PELAKSANA'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=inspeksi&action=edit&id=" . $r['tgl_inspeksi'] . "'><i class='fa-solid fa-pen-to-square'></i>Edit</a>
                 <a class='btn btn-danger btn-sm' href='admin.php?target=inspeksi&action=delete&id=" . $r['tgl_inspeksi'] . "'><i class='fa-solid fa-trash'></i>Hapus</a>
