@@ -31,13 +31,13 @@ $rows = $query->fetch_object();
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <div class="form-check">
                         <input type="radio" class="form-check-input" name="baru" id="baru" value="baru">
-                        <label for="baru" class="form-check-label">
+                        <label for="spesifikasi" class="form-check-label">
                             Baru
                         </label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" name="bekasI" id="bekas" value="bekas">
-                        <label for="bekas" class="form-check-label">
+                        <input type="radio" class="form-check-input" name="bekas" id="bekas" value="bekas">
+                        <label for="spesifikasi" class="form-check-label">
                             Bekas
                         </label>
                     </div>
