@@ -1,5 +1,5 @@
 <?php 
-include "config/config_database.php";
+include "config/__config_database.php";
 $db = __database();
 
 $pass = md5($_POST['password']);
@@ -47,8 +47,3 @@ document.location='login.php'</script>";
  echo "<script>alert('Maaf, Login Gagal, username tidak terdaftar!');
 document.location='login.php'</script>";
 }
-
- 
- 
- ?>
- 
