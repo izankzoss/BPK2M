@@ -58,14 +58,13 @@ include "config/config_database.php";
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" <<<<<<< HEAD=======aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-briefcase "></i>
                     <span>Instansi</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset">>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset " aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-briefcase "></i>
                     <span>Instansi</span>
                 </a>
@@ -75,15 +74,13 @@ include "config/config_database.php";
                     <i class="fas fa-atlas "></i>
                     <span>Asset</span>
                 </a>
-                <<<<<<< HEAD <<<<<<< HEAD==============>>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
             </li>
 
-            >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-cubes"></i>
                     <span>Jenis Asset</span>
-                    <<<<<<< HEAD <<<<<<< HEAD </a>
+                </a>
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-history"></i>
@@ -107,11 +104,6 @@ include "config/config_database.php";
                     <i class="fas fa-luggage-cart "></i>
                     <span>Pengadaan</span>
                 </a>
-
-
-                =======
-                =======
-                >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
                 </a>
             </li>
             <li class="nav-item">
@@ -132,10 +124,6 @@ include "config/config_database.php";
                     <span>Pengadaan</span>
                 </a>
             </li>
-
-            <<<<<<< HEAD>>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
-                =======
-                >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
         </ul>
         <!-- End of Sidebar -->
 
