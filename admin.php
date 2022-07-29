@@ -57,8 +57,14 @@ include "config/config_database.php";
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Pages Collapse Menu -->
-             <li class="nav-item">
-            <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi"
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" <<<<<<< HEAD=======aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-briefcase "></i>
+                    <span>Instansi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset">>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-briefcase "></i>
                     <span>Instansi</span>
@@ -69,18 +75,15 @@ include "config/config_database.php";
                     <i class="fas fa-atlas "></i>
                     <span>Asset</span>
                 </a>
-<<<<<<< HEAD
-
-=======
+                <<<<<<< HEAD <<<<<<< HEAD==============>>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
             </li>
-           
->>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
+
+            >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-cubes"></i>
                     <span>Jenis Asset</span>
-<<<<<<< HEAD
-                </a>
+                    <<<<<<< HEAD <<<<<<< HEAD </a>
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-history"></i>
@@ -106,32 +109,33 @@ include "config/config_database.php";
                 </a>
 
 
-=======
-                </a> 
+                =======
+                =======
+                >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
+                </a>
             </li>
-                <li class="nav-item">
-            <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi"
-                    aria-expanded="true" aria-controls="collapseTwo">
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-history"></i>
                     <span>No Registrasi</span>
                 </a>
-                </li>
-                <li class="nav-item">
-            <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi"
-                    aria-expanded="true" aria-controls="collapseTwo">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-layer-group "></i>
                     <span>Inspeksi</span>
                 </a>
-                </li>
-                <li class="nav-item">
-            <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan"
-                    aria-expanded="true" aria-controls="collapseTwo">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-luggage-cart "></i>
                     <span>Pengadaan</span>
                 </a>
-                </li>
-           
->>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
+            </li>
+
+            <<<<<<< HEAD>>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
+                =======
+                >>>>>>> 258cdfae0b36bc22826c2939a9887c1ce77bb339
         </ul>
         <!-- End of Sidebar -->
 
