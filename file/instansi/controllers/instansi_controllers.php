@@ -4,15 +4,15 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'id_asset' => $_POST['id_asset'],
-        'jenis_asset' => $_POST['jenis_asset'],
-        'ket_asset' => $_POST['ket_asset']
+        'id_instansi' => $_POST['id_instansi'],
+        'nm_instansi' => $_POST['nm_instansi'],
+        'ket_instansi' => $_POST['ket_instansi']
     ];
-    $simpan = __simpan($db, "jenis_asset", $data);
+    $simpan = __simpan($db, "instansi", $data);
     if ($simpan) {
 ?>
         <script>
-            window.location.href = 'admin.php?target=jenis_asset';
+            window.location.href = 'admin.php?target=instansi';
         </script>
     <?php
     } else {
@@ -23,13 +23,13 @@ if ($opsi == "input") {
 //start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'id_asset' => $_GET['id']
+        'id_instansi' => $_GET['id']
     ];
-    $delete = __delete($db, "jenis_asset", $where);
+    $delete = __delete($db, "instansi", $where);
     if ($delete) {
     ?>
         <script>
-            window.location.href = 'admin.php?target=jenis_asset';
+            window.location.href = 'admin.php?target=instansi';
         </script>
     <?php
     } else {
@@ -40,18 +40,18 @@ elseif ($opsi == "delete") {
 //start kondisi update
 elseif ($opsi == "update") {
         $data = [
-            'jenis_asset' => $_POST['jenis_asset'],
-            'ket_asset' => $_POST['ket_asset']
+            'nm_instansi' => $_POST['nm_instansi'],
+            'ket_instansi' => $_POST['ket_instansi']
         ];
     $where = [
-        'id_asset' => $_POST['id']
+        'id_instansi' => $_POST['id']
     ];
-    $update = __update($db, "jenis_asset", $data, $where);
+    $update = __update($db, "instansi", $data, $where);
     if ($update) {
 
     ?>
         <script>
-            window.location.href = 'admin.php?target=jenis_asset';
+            window.location.href = 'admin.php?target=instansi';
         </script>
 <?php
     } else {
