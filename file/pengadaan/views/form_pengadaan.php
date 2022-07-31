@@ -36,7 +36,7 @@ $db = __database();
                     Sumber Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="integer" name="sumber_pengadaan" class="form-control" />
+                    <input type="text" name="sumber_pengadaan" class="form-control" />
                 </div>
             </div>
             

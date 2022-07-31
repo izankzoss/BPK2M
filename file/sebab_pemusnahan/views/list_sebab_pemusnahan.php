@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h4><i class="fa-solid fa-database"></i> Data Sebab</h4>
+        <h4><i class="fa-solid fa-database"></i>Sebab Pemusnahan</h4>
     </div>
     <div class="card-body">
         <?php
@@ -11,7 +11,11 @@
         echo "<table class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th><th>Id Sebab</th><th>Sebab</th><th>Keterangan</th><th>#</th>
+            <th>No</th>
+            <th>Id Sebab</th>
+            <th>Sebab</th>
+            <th>Keterangan</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>";
@@ -21,9 +25,9 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['ID_SEBAB'] . "</td>
-            <td>" . $r['SEBAB'] . "</td>
-            <td>" . $r['KET_SEBAB'] . "</td>
+            <td>" . $r['id_sebab'] . "</td>
+            <td>" . $r['sebab'] . "</td>
+            <td>" . $r['ket_sebab'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=sebab_pemusnahan&action=edit&id=" . $r['ID_SEBAB'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
