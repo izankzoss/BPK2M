@@ -59,6 +59,7 @@ include "config/config_database.php";
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -72,6 +73,8 @@ include "config/config_database.php";
                     </div>
                 </div>
 =======
+=======
+>>>>>>> ba734949dd2dfa77af8caafc30f64e396de4dd98
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'instansi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi " aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-briefcase "></i>
                     <span>Instansi</span>
@@ -104,6 +107,9 @@ include "config/config_database.php";
                     <i class="fas fa-layer-group "></i>
                     <span>Inspeksi</span>
                 </a>
+<<<<<<< HEAD
+>>>>>>> ba734949dd2dfa77af8caafc30f64e396de4dd98
+=======
 >>>>>>> ba734949dd2dfa77af8caafc30f64e396de4dd98
             </li>
 
