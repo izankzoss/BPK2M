@@ -18,10 +18,10 @@ if ($user_valid) {
     // jika password sesuai
     // buat session
     session_start();
-    $_SESSION ['username'] = $user_valid['username'];
-    $_SESSION ['nm_lengkap'] = $user_valid['nm_lengkap'];
-    $_SESSION ['jabatan'] = $user_valid['jabatan'];
-    $_SESSION ['level'] = $user_valid['level'];
+    $_SESSION ['USERNAME'] = $user_valid['USERNAME'];
+    $_SESSION ['NM_LENGKAP'] = $user_valid['NM_LENGKAP'];
+    $_SESSION ['JABATAN'] = $user_valid['JABATAN'];
+    $_SESSION ['LEVEL'] = $user_valid['LEVEL'];
 
     // uji level user
     if ($level == "Pegawai") {
