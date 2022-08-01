@@ -6,7 +6,7 @@ if ($opsi == "input") {
     $data = [
         'id_asset' => $_POST['id_asset'],
         'jenis_asset' => $_POST['jenis_asset'],
-        'ket_asset' => $_POST['ket_asset']
+        'keterangan' => $_POST['keterangan']
     ];
     $simpan = __simpan($db, "jenis_asset", $data);
     if ($simpan) {
@@ -39,10 +39,10 @@ elseif ($opsi == "delete") {
 //end kondisi delete
 //start kondisi update
 elseif ($opsi == "update") {
-        $data = [
-            'jenis_asset' => $_POST['jenis_asset'],
-            'ket_asset' => $_POST['ket_asset']
-        ];
+    $data = [
+        'jenis_asset' => $_POST['jenis_asset'],
+        'ket_asset' => $_POST['ket_asset']
+    ];
     $where = [
         'id_asset' => $_POST['id']
     ];

@@ -28,7 +28,7 @@ if (!isset($_GET['target'])) {
                         <div class="icon">
                             <i class="fa fa-user"></i>
                         </div>
-                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-6">
@@ -41,7 +41,7 @@ if (!isset($_GET['target'])) {
                         <div class="icon">
                             <i class="fa fa-cube"></i>
                         </div>
-                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url(); ?>admin.php?target=inspeksi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-6">
@@ -54,7 +54,7 @@ if (!isset($_GET['target'])) {
                         <div class="icon">
                             <i class="fa fa-user"></i>
                         </div>
-                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url(); ?>admin.php?target=pengadaan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-6">
@@ -67,7 +67,7 @@ if (!isset($_GET['target'])) {
                         <div class="icon">
                             <i class="fa fa-user"></i>
                         </div>
-                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>

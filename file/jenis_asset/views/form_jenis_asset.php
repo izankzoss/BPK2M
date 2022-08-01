@@ -28,10 +28,10 @@ $db = __database();
                     Keterangan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="ket_asset" class="form-control" />
+                    <input type="text" name="keterangan" class="form-control" />
                 </div>
             </div>
-            
+
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
