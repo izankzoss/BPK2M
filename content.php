@@ -37,7 +37,7 @@ if (!isset($_GET['target'])) {
                                     <div class="col-auto">
                                         <i class="fas fa-briefcase fa-2x fas fa-briefcase-300"></i>
                                     </div>
-                                    <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ if (!isset($_GET['target'])) {
                                     <div class="col-auto">
                                         <i class="fas fa-folder fa-2x fas fa-folder-300"></i>
                                     </div>
-                                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ if (!isset($_GET['target'])) {
                                         <div class="col-auto">
                                             <i class="fas  fa-shopping-cart fa-2x fas  fa-shopping-cart-300"></i>
                                         </div>
-                                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'Pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ if (!isset($_GET['target'])) {
                                         <div class="col-auto">
                                             <i class="fas fa-trash fa-2x fas fa-trash-300"></i>
                                         </div>
-                                        <a href="karyawan.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>

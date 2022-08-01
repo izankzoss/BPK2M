@@ -24,7 +24,7 @@ if ($opsi == "input") {
 //start kondisi delete
 elseif ($opsi == "delete") {
     $where = [
-        'username' => $_GET['id']
+        'USERNAME' => $_GET['id']
     ];
     $delete = __delete($db, "users", $where);
     if ($delete) {

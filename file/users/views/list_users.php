@@ -27,10 +27,10 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['username'] . "</td>
-            <td>" . $r['password'] . "</td>
-            <td>" . $r['nm_lengkap'] . "</td>
-            <td>" . $r['jabatan'] . "</td>
+            <td>" . $r['USERNAME'] . "</td>
+            <td>" . $r['PASSWORD'] . "</td>
+            <td>" . $r['NM_LENGKAP'] . "</td>
+            <td>" . $r['JABATAN'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=users&action=edit&id=" . $r['username'] . "'>
                 <i class='fa-solid fa-pen-to-square'>Edit</i>

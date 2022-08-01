@@ -20,7 +20,7 @@ $db = __database();
                     Password
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="date" name="password" class="form-control" />
+                    <input type="password" name="password" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">
