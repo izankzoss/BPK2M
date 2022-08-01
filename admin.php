@@ -58,7 +58,7 @@ include "config/config_database.php";
             <li class="nav-item">
                 <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapsethree"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-briefcase"></i>
                     <span>Asset</span>
                 </a>
                 <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
@@ -73,7 +73,7 @@ include "config/config_database.php";
             <li class="nav-item">
                 <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-folder"></i>
                     <span>Inspeksi</span>
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -88,7 +88,7 @@ include "config/config_database.php";
             <li class="nav-item">
                 <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas  fa-shopping-cart"></i>
                     <span>Pengadaan</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -102,7 +102,7 @@ include "config/config_database.php";
                 <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-trash"></i>
                     <span>Pemusnahan</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -117,7 +117,7 @@ include "config/config_database.php";
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'users' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=users" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-luggage-cart "></i>
+                    <i class="fas fa-user "></i>
                     <span>Users</span>
                 </a>
             </li>
