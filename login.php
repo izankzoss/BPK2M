@@ -42,7 +42,7 @@
   <div class="text-center mb-4">
     <img class="mb-4" src="../BPK2M/assets/brand/download.jpg" alt="logo" width="250" height="">
     <h1 class="h3 mb-3 font-weight-normal"> Selamat Datang</h1>
-    <p>Silahkan Login untuk masuk.</a></p>
+    <p>Di Aplikasi BPK2M</a></p>
   </div>
 
   <div class="form-label-group">
