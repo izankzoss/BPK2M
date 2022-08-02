@@ -132,6 +132,10 @@ include "config/config_database.php";
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'users' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=users">
                     <i class="fas fa-user"></i>User</a>
             </li>
+             <!-- Sidebar Toggler (Sidebar) -->
+ <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
         </ul>
         <!-- End of Sidebar -->
 
