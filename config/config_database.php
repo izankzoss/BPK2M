@@ -3,33 +3,33 @@
 function __database($host = "localhost", $user = "root", $pass = "", $db = "bpk2m")
 {
     $sambung = new mysqli($host, $user, $pass, $db);
-    if (!$sambung) {
-        echo "sambung gagal" . $sambung->error;
+    if (!$sambung){
+        echo "sambungan gagal " . $sambung->error;
+        exit;
     }
     return $sambung;
 }
-//mengambil fields database
+//	mengambil fields dari database
 function __get_fields($sambung, $table)
 {
-    $get_fields = $sambung->query("SELECT * FROM $table");
+    $get_fields = $sambung->query("select * from $table");
     if ($get_fields) {
         $fields = array();
-        while ($rfields = $get_fields->fetch_fields()) {
+        while ($rfields = $get_fields->fetch_field()) {
             $fields[] = $rfields->name;
         }
         return $fields;
     } else {
-        return "gagal mebambil fields" . $sambung->error;
+        return "gagal mengambil fields " . $sambung->error; 
     }
 }
-
-//fungsi simpan buatan
+// fungsi simpan buatan
 function __simpan($sambung, $table, $data)
 {
     if (!is_array($data)) {
-        return "error format tidak valid";
+        return "error, format tidak valid";
     }
-    //proses pembuatan query
+    // proses pembuatan query
     $query = "INSERT INTO $table (";
     foreach ($data as $key => $value) {
         $query .= $key;
@@ -38,6 +38,7 @@ function __simpan($sambung, $table, $data)
         }
     }
     $query .= ") VALUES (";
+    
     foreach ($data as $k => $v) {
         $query .= "'" . $v . "'";
         if ($k != array_key_last($data)) {
@@ -45,10 +46,11 @@ function __simpan($sambung, $table, $data)
         }
     }
     $query .= ")";
-    //end query pembuatan
-    //start query
-    $data = $sambung->query($query);
-
+    // end pembuatan query
+    
+    // running query
+    $data = $sambung->query ($query);
+    
     if (!$data) {
         return false;
     } else {
@@ -56,15 +58,18 @@ function __simpan($sambung, $table, $data)
     }
 }
 
-function __ambil($sambung, $table, $fields = null, $where = null, $join = null, $orderby = null)
+
+function __ambil($sambung, $table, $fields = null, $where = null, $join = null,
+$orderby = null) 
 {
-    $query = "SELECT";
+    $query = "SELECT ";
     if ($fields == null) {
         $query .= "*";
     } else {
         $query .= $fields;
     }
-    $query .= "FROM $table";
+    $query .= " FROM $table";
+    
     if ($join != null) {
         if (is_array($join)) {
             foreach ($join as $j) {
@@ -72,23 +77,36 @@ function __ambil($sambung, $table, $fields = null, $where = null, $join = null, 
             }
         }
     }
-    if ($orderby != null) {
-        $query .= "ORDER BY" . $orderby;
+    if ($where != null) {
+        if (is_array($where)) {
+            $query .= " WHERE ";
+            foreach ($where as $k => $w) {
+                $query .= $k . " = '" . $w . "'";
+                if ($k != array_key_last($where)) {
+                    $query .= " AND ";
+                }
+            }
+        }
     }
-    //return query
+
+    if ($orderby != null) {
+        $query .= " ORDER BY " . $orderby;
+    }
+    
+    // return $query;
     $data = $sambung->query($query);
+    
 
     if (!$data) {
         return false;
     } else {
         return $data;
-    }
+    }        
 }
 
-//delete section
 function __delete($sambung, $table, $where)
 {
-    $query = " DELETE FROM $table ";
+    $query = "DELETE FROM $table";
     if (is_array($where)) {
         $query .= " WHERE ";
         foreach ($where as $k => $w) {
@@ -100,22 +118,24 @@ function __delete($sambung, $table, $where)
     } else {
         return false;
     }
-
+    // return $query;
+    
     $data = $sambung->query($query);
     if (!$data) {
         return false;
-        exit;
     } else {
         return true;
     }
 }
 
-
-function __update($sambung, $table, $data, $where = null)
+// UPDATE prodi SET kd_prodi = '', nama_proid =''	WHERE
+	
+	
+function __update($sambung, $table, $data, $where	= null)
 {
-    $query = " UPDATE $table SET ";
+    $query = "UPDATE $table SET ";
     if (!is_array($data)) {
-        return "format tak valid";
+        return "format tidak valid";
     } else {
         foreach ($data as $k => $v) {
             $query .= $k . " = '" . $v . "'";
@@ -124,6 +144,7 @@ function __update($sambung, $table, $data, $where = null)
             }
         }
     }
+    
     if ($where != null) {
         if (is_array($where)) {
             $query .= " WHERE ";
@@ -137,11 +158,15 @@ function __update($sambung, $table, $data, $where = null)
             return false;
         }
     }
+    // return $query;
     $data = $sambung->query($query);
-
+    
+    
     if (!$data) {
         return false;
     } else {
         return true;
     }
-}
+}	
+
+    

@@ -43,10 +43,10 @@ elseif ($opsi == "update") {
         $data = [
             'tgl_pengadaan' => $_POST['tgl_pengadaan'],
             'jml_pengadaan' => $_POST['jml_pengadaan'],
-            'sumber_pengadaan' => $_POST['sumber_pengadaan']
+            'SUMBER_PENGADAAN' => $_POST['SUMBER_PENGADAAN']
         ];
     $where = [
-        'id_pengadaan' => $_POST['id']
+        'ID_PENGADAAN' => $_POST['id']
     ];
     $update = __update($db, "pengadaan", $data, $where);
     if ($update) {
