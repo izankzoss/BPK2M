@@ -73,9 +73,9 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
             <a class='btn btn-success btn-sm' href='admin.php?target=asset&action=edit&id=" . $r['NO_ASSET'] . "'>
             <i class='fa-solid fa-pen-to-square'></i>
             Edit</a> 
+            <i class='fa-solid fa-pen-to-square'>Edit</i></a> 
         <a class='btn btn-danger btn-sm' href='admin.php?target=asset&action=delete&id=" . $r['NO_ASSET'] . "'>
-        <i class='fa-solid fa-trash'></i>
-        Hapus</a>
+        <i class='fa-solid fa-trash'>Hapus</i></a>
             </td>
             </tr>";
             $no++;

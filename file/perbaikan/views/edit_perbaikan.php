@@ -1,27 +1,27 @@
 <?php
 $db = __database();
 $where = [
-    'id_perbaikan' => $_GET['id']
+    'ID_PERBAIKAN' => $_GET['id']
 ];
 $query = __ambil($db, "perbaikan", "*", $where);
-//menampilkasn hasil query
-//gunakan fetch assoc
+// menampilkan hasil query dalam bentuk object
+// anda bisa juga menggunakan mysql_fetch_assoc atau mysql_fetch_array dll
 
-$rows = $query->fetch_object();
-?>
-<div class="card">
+$rows     = $query->fetch_object();
+// print_r($rows);
+?> <div class="card">
     <div class="card-header">
-        <h4>Edit Perbaikan</h4>
+        <h4>Edit Keadaan</h4>
     </div>
     <div class="card-body">
-        <form method="POST" action="admin.php?target=perbaikan&action=update" data-parsley-validate class="form-horizontal form-label-left">
-            <input type="text" name="id" value="<?php echo $rows->ID_PERBAIKAN; ?>">
+        <form method="post" action="admin.php?target=perbaikan&action=update" data-parsley-validate class="form-horizontal form-label-left">
+            <input type="hidden" name="id" value="<?php echo $rows->ID_PERBAIKAN; ?>">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Perbaikan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input  type="text" id="PERBAIKAN" name="PERBAIKAN" class="form-control" value="<?php echo $rows->PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="text" name="PERBAIKAN" class="form-control" value="<?php echo $rows->PERBAIKAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -29,7 +29,7 @@ $rows = $query->fetch_object();
                     Keterangan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="KET_PERBAIKAN" type="text" name="KET_PERBAIKAN" class="form-control" value="<?php echo $rows->KET_PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="text" name="KET_PERBAIKAN" class="form-control" value="<?php echo $rows->KET_PERBAIKAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -37,7 +37,7 @@ $rows = $query->fetch_object();
                     Tanggal
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="tgl_perbaikan" type="date" name="tgl_perbaikan" class="form-control" value="<?php echo $rows->TGL_PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="date" name="TGL_PERBAIKAN" class="form-control" value="<?php echo $rows->TGL_PERBAIKAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -45,13 +45,15 @@ $rows = $query->fetch_object();
                     Biaya
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="biaya" type="text" name="biaya" class="form-control" value="<?php echo $rows->BIAYA; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="text" name="BIAYA" class="form-control" value="<?php echo $rows->BIAYA; ?>" />
                 </div>
             </div>
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="submit" class="btn btn-success btn-sm" value="simpan">
-                    <a class="btn btn-danger btn-sm" href="admin.php?target=perbaikan">Kembali</a>
+                    <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
+                        <i class="fa-solidfa-floppy-disk"></i> Simpan
+                    </button>
+                    <a class="btn btn-danger btn-sm" href="admin.php?target=keadaan"><i class="fa-solidfa-circle-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </form>
