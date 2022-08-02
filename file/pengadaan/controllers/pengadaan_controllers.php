@@ -41,9 +41,9 @@ elseif ($opsi == "delete") {
 //start kondisi update
 elseif ($opsi == "update") {
     $data = [
-        'tgl_pengadaan' => $_POST['tgl_pengadaan'],
-        'jml_pengadaan' => $_POST['jml_pengadaan'],
-        'SUMBER_PENGADAAN' => $_POST['SUMBER_PENGADAAN']
+        'id_jenis' => $_POST['id_jenis'],
+        'id_instansi' => $_POST['id_instansi'],
+        'tgl_pengadaan' => $_POST['tgl_pengadaan']
     ];
     $where = [
         'ID_PENGADAAN' => $_POST['id']

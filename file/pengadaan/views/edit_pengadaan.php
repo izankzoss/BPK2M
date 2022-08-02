@@ -24,6 +24,42 @@ $rows       = $query->fetch_object();
                 </div>
             </div>
             <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first_name">
+                    Jenis Pengadaan
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_jenis" id="id_jenis" class="form-select">
+                        <option value="">Jenis Pengadaan</option>
+                        <?php
+                        $pengadaan_data = __ambil($db, "jenis_pengadaan", "*");
+                        while ($p = $pengadaan_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $p['ID_PENGADAAN']; ?>" <?php echo $rows->ID_INSTANSI == $p['JENIS_PENGADAAN'] ? "selected" : ""; ?>> <?php echo $p['JENIS_PENGADAAN']; ?> </option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first_name">
+                    Instansi
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_instansi" id="id_instansi" class="form-select">
+                        <option value="">Pilih Instansi</option>
+                        <?php
+                        $instansi_data = __ambil($db, "instansi", "*");
+                        while ($r = $instansi_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $r['ID_INSTANSI']; ?>" <?php echo $rows->ID_INSTANSI == $r['NM_INSTANSI'] ? "selected" : ""; ?>> <?php echo $r['NM_INSTANSI']; ?> </option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Tanggal Pengadaan
                 </label>
@@ -31,22 +67,7 @@ $rows       = $query->fetch_object();
                     <input type="date" name="tgl_pengadaan" class="form-control" value="<?php echo $rows->TGL_PENGADAAN; ?>" />
                 </div>
             </div>
-            <div class="mb-3">
-                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Jumlah Pengadaan
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="jml_pengadaan" class="form-control" value="<?php echo $rows->JML_PENGADAAN; ?>" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Sumber Pengadaan
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="sumber_pengadaan" class="form-control" value="<?php echo $rows->SUMBER_PENGADAAN; ?>" />
-                </div>
-            </div>
+            
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
