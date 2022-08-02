@@ -101,27 +101,6 @@
             </div>
             <div class="mb-3">
                 <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Pilih Pengadaan
-                </label>
-            </div>
-            <div class="mb-3">
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <select name="id_pengadaan" id="id_pengadaan" class="form-select">
-                        <option value="">Pilih Pengadaan</option>
-                        <?php
-                        $db = __database();
-                        $pengadaan_data = __ambil($db, "pengadaan");
-                        while ($k = $pengadaan_data->fetch_array()) {
-                        ?>
-                            <option value="<?php echo $k['ID_PENGADAAN']; ?>"><?php echo $k['ID_JENIS']; ?></option>
-                        <?php
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Tanggal Terima
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">

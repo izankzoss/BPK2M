@@ -30,8 +30,6 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
       <th>No Asset</th>
       <th>Nama Barang</th>
       <th>Spesifikasi</th>
-      <th>jumlah</th>
-      <th>Harga</th>
       <th>Total</th>
       <th>Nama Instansi</th>
       <th>Jenis Asset</th>
@@ -47,10 +45,6 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
             "LEFT JOIN JENIS_ASSET as j on j.id_asset=m.id_asset"
 
         ];
-        $where = [
-            'm.id_instansi' => $_SESSION['id'],
-            'm.id_asset' => $_SESSION['id']
-        ];
         $q = __ambil($db, "asset as m", "*", $where, $join);
         while ($r = $q->fetch_array()) {
             $jumlah = $r['JUMLAH'];
@@ -61,9 +55,6 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
             <td>" . $r['NO_ASSET'] . "</td>
             <td>" . $r['NM_BARANG'] . "</td>
             <td>" . $r['SPESIFIKASI'] . "</td>
-            <td>" . $r['JUMLAH'] . "</td>
-            
-            <td>" . "Rp. " . number_format($r['HARGA']) . " ,-" . "</td>
             <td>" . "Rp. " . number_format($total) . " ,-" . "</td>
             <td>" . $r['NM_INSTANSI'] . "</td>
             <td>" . $r['JENIS_ASSET'] . "</td>
