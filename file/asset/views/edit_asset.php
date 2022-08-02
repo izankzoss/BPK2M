@@ -15,7 +15,6 @@ $rows = $query->fetch_object();
     </div>
     <div class="card-body">
         <form method="POST" action="admin.php?target=asset&action=update" data-parsley-validate class="form-horizontal form-label-left">
-            <input type="text" name="id" value="<?php echo $rows->NO_ASSET; ?>">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Nama Barang
@@ -68,12 +67,12 @@ $rows = $query->fetch_object();
                         <option value="">Pilih Instansi</option>
                         <?php
                         $where_instansi = [
-                            'id_instansi' => $_SESSION['id']
+                            'ID_INSTANSI' => $_SESSION['id']
                         ];
                         $instansi_data = __ambil($db, "instansi", "*", $where_instansi);
                         while ($r = $instansi_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $r['ID_INSTANSI']; ?>" <?php echo $rows->id_instansi == $r['id_instansi'] ? "selected" : ""; ?>> <?php echo $r['NM_INSTANSI']; ?> </option>
+                            <option value="<?php echo $r['ID_INSTANSI']; ?>" <?php echo $rows->ID_INSTANSI == $r['NM_INSTANSI'] ? "selected" : ""; ?>> <?php echo $r['NM_INSTANSI']; ?> </option>
                         <?php
                         }
                         ?>
@@ -89,12 +88,12 @@ $rows = $query->fetch_object();
                         <option value="">Pilih Jenis Asset</option>
                         <?php
                         $where_jenis = [
-                            'id_asset' => $_SESSION['id']
+                            'ID_ASSET' => $_SESSION['id']
                         ];
                         $jenis_data = __ambil($db, "jenis_asset", "*", $where_jenis);
-                        while ($r = $jenis_data->fetch_array()) {
+                        while ($k = $jenis_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $r['ID_ASSET']; ?>" <?php echo $rows->id_asset == $r['id_asset'] ? "selected" : ""; ?>> <?php echo $r['JENIS_ASSET']; ?> </option>
+                            <option value="<?php echo $k['ID_ASSET']; ?>" <?php echo $rows->ID_ASSET == $k['JENIS_ASSET'] ? "selected" : ""; ?>> <?php echo $r['JENIS_ASSET']; ?> </option>
                         <?php
                         }
                         ?>
