@@ -72,6 +72,21 @@ include "config/config_database.php";
                     </div>
                 </div>
             </li>
+          <!-- Nav Item - Utilities Collapse Menu -->
+          <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-atlas"></i>
+                    <span>Pengadaan</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" >Pengadaan</h6>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">Pengadaan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">Jenis Pengadaan</a>
+                    </div>
+                </div>
+            </li>
         </ul>
         <!-- End of Sidebar -->
 
