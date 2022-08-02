@@ -9,6 +9,8 @@ if ($opsi == "input") {
         'spesifikasi' => $_POST['spesifikasi'],
         'jumlah' => $_POST['jumlah'],
         'harga' => $_POST['harga'],
+        'id_instansi' => $_POST['id_instansi'],
+        'id_asset' => $_POST['id_asset'],
         'tgl_terima' => $_POST['tgl_terima']
     ];
     $simpan = __simpan($db, "asset", $data);

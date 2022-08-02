@@ -59,31 +59,73 @@
             </div>
             <div class="mb-3">
                 <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Tanggal Terima
-                </label>
-                <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="date" name="tgl_terima" class="form-control" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
-                    Semester
+                    Instansi
                 </label>
             </div>
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <select name="kd_semester" id="kd_semester" class="form-select">
-                        <option value="">Pilih Semester</option>
+                    <select name="id_instansi" id="id_instansi" class="form-select">
+                        <option value="">Pilih Instansi</option>
                         <?php
                         $db = __database();
-                        $semester_data = __ambil($db, "semester", "*", $where);
-                        while ($s = $semester_data->fetch_array()) {
+                        $instansi_data = __ambil($db, "instansi");
+                        while ($s = $instansi_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $s['kd_semester']; ?>"><?php echo $s['semester']; ?></option>
+                            <option value="<?php echo $s['ID_INSTANSI']; ?>"><?php echo $s['NM_INSTANSI']; ?></option>
                         <?php
                         }
                         ?>
                     </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Jenis Asset
+                </label>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_asset" id="id_asset" class="form-select">
+                        <option value="">Pilih Jenis Asset</option>
+                        <?php
+                        $db = __database();
+                        $jenis_data = __ambil($db, "jenis_asset");
+                        while ($j = $jenis_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $j['ID_ASSET']; ?>"><?php echo $j['JENIS_ASSET']; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Pilih Pengadaan
+                </label>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_pengadaan" id="id_pengadaan" class="form-select">
+                        <option value="">Pilih Pengadaan</option>
+                        <?php
+                        $db = __database();
+                        $jenis_data = __ambil($db, "pengadaan");
+                        while ($k = $jenis_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $j['ID_PENGADAAN']; ?>"><?php echo $j['ID_PENGADAAN']; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Tanggal Terima
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="date" name="tgl_terima" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">
