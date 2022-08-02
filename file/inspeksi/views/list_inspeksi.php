@@ -13,6 +13,8 @@
         <tr>
             <th>No</th>
             <th>Id Inspeksi</th>
+            <th>Keadaan</th>
+            <th>Perbaikan</th>
             <th>Tanggal</th>
             <th>Pelaksana</th>
             <th>Action</th>
@@ -20,12 +22,18 @@
         </thead>
         <tbody>";
         // ambil data dari database
-        $q = __ambil($db,"inspeksi");
+        $join = [
+            "LEFT JOIN KEADAAN as k on k.id_keadaan=m.id_keadaan",
+            "LEFT JOIN PERBAIKAN as j on j.id_perbaikan=m.id_perbaikan",
+        ];
+        $q = __ambil($db, "inspeksi as m", "*", $where, $join);
         $no = 1;
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
             <td>" . $r['ID_INSPEKSI'] . "</td>
+            <td>" . $r['KEADAAN'] . "</td>
+            <td>" . $r['PERBAIKAN'] . "</td>
             <td>" . $r['TGL_INSPEKSI'] . "</td>
             <td>" . $r['PELAKSANA'] . "</td>
             <td>

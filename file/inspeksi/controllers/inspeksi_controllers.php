@@ -5,11 +5,13 @@ $opsi = $_GET['action'];
 if ($opsi == "input") {
     $data = [
         'ID_INSPEKSI' => $_POST['ID_INSPEKSI'],
+        'ID_KEADAAN' => $_POST['ID_KEADAAN'],
+        'ID_PERBAIKAN' => $_POST['ID_PERBAIKAN'],
         'TGL_INSPEKSI' => $_POST['TGL_INSPEKSI'],
         'PELAKSANA' => $_POST['PELAKSANA']
     ];
     $simpan = __simpan($db, "inspeksi", $data);
-    if ($simpan){
+    if ($simpan) {
 ?>
         <script>
             window.location.href = 'admin.php?target=inspeksi';
