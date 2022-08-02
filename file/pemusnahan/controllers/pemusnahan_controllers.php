@@ -4,7 +4,7 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'id_pemusnahan' => $_POST['id_pemusnahan'],
+        'ID_PEMUSNAHAN' => $_POST['ID_PEMUSNAHAN'],
         'tgl_pemusnahan' => $_POST['tgl_pemusnahan'],
         'ket_pemusnahan' => $_POST['ket_pemusnahan']
     ];
