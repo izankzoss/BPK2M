@@ -31,7 +31,6 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
         $join = [
             "LEFT JOIN INSTANSI as k on k.id_instansi=m.id_instansi",
             "LEFT JOIN JENIS_ASSET as j on j.id_asset=m.id_asset"
-
         ];
         $q = __ambil($db, "asset as m", "*", $where, $join);
         while ($r = $q->fetch_array()) {
