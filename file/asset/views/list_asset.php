@@ -27,6 +27,7 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
       </thead>
       <tbody>";
         // ambil data dari database
+
         $no = 1;
         $join = [
             "LEFT JOIN INSTANSI as k on k.id_instansi=m.id_instansi",
@@ -34,6 +35,9 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
         ];
         $q = __ambil($db, "asset as m", "*", $where, $join);
         while ($r = $q->fetch_array()) {
+            $jumlah = $r['JUMLAH'];
+            $harga = $r['HARGA'];
+            $total = jumlah($jumlah, $harga);
             echo "<tr>
             <td>" . $no . "</td>
             <td>" . $r['NO_ASSET'] . "</td>
