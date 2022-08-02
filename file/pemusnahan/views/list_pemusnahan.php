@@ -14,7 +14,7 @@
         <tr>
             <th>No</th>
             <th>Id Pemusnahan</th>
-            <th>Tanggal Pemsunahan</th>
+            <th>Tanggal Pemusnahan</th>
             <th>Keterangan</th>
             <th>Action</th>
         </tr>
