@@ -41,11 +41,11 @@ elseif ($opsi == "delete") {
 //start update
 elseif ($opsi == "update") {
     $data = [
-        'keadaan' => $_POST['keadaan'],
-        'ket_keadaan' => $_POST['ket_keadaan']
+        'KEADAAN' => $_POST['KEADAAN'],
+        'KET_KEADAAN' => $_POST['KET_KEADAAN']
     ];
     $where = [
-        'id_keadaan' => $_POST['id']
+        'ID_KEADAAN' => $_POST['id']
     ];
     $update = __update($db, "keadaan", $data, $where);
     if ($update) {

@@ -40,7 +40,7 @@ elseif ($opsi == "delete") {
 // start kondisi update
 elseif ($opsi == "update") {
     $data = [
-        // 'TGL_INSPEKSI' => $_POST['TGL_INSPEKSI'],
+        'TGL_INSPEKSI' => $_POST['TGL_INSPEKSI'],
         'PELAKSANA' => $_POST['PELAKSANA']
     ];
     $where = [
