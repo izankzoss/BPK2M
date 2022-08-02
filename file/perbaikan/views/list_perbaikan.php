@@ -32,7 +32,8 @@ target=perbaikan&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>
             <td>" . $r['PERBAIKAN'] . "</td>
             <td>" . $r['KET_PERBAIKAN'] . "</td>
             <td>" . $r['TGL_PERBAIKAN'] . "</td>
-            <td>" . $r['BIAYA'] . "</td>
+            <td>" . "Rp. " . number_format($r['BIAYA']) . " ,-" . "</td>
+           
         <td>
             <a class='btn btn-success btn-sm' href='admin.php?target=perbaikan&action=edit&id=" . $r['ID_PERBAIKAN'] . "'>
             <i class='fa-solid fa-pen-to-square'>Edit</i>
