@@ -67,9 +67,9 @@ include "config/config_database.php";
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Asset</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" aria-expanded="true" aria-controls="collapseTwo">Asset</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">Jenis Asset</a>
                         <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'instansi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" aria-expanded="true" aria-controls="collapseTwo">Instansi</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">Jenis Asset</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" aria-expanded="true" aria-controls="collapseTwo">Asset</a>
                     </div>
                 </div>
             </li>
