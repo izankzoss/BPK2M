@@ -32,10 +32,10 @@ target=keadaan&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
         <td>
             <a class='btn btn-success btn-sm' href='admin.php?target=keadaan&action=edit&id=" . $r['ID_KEADAAN'] . "'>
             <i class='fa-solid fa-pen-to-square'>Edit</i>
-            Edit</a> 
+            </a> 
         <a class='btn btn-danger btn-sm' href='admin.php?target=keadaan&action=delete&id=" . $r['ID_KEADAAN'] . "'>
         <i class='fa-solid fa-trash'>Hapus</i>
-        Hapus</a>
+        </a>
             </td>
             </tr>";
             $no++;
