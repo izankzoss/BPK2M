@@ -1,7 +1,7 @@
 <?php
 $db = __database();
 $where = [
-    'id_pengadaan' => $_GET['id']
+    'ID_PENGADAAN' => $_GET['id']
 ];
 $query     = __ambil($db, "pengadaan", "*", $where);
 //menampilkan hasil query dalam bentuk object
@@ -20,7 +20,7 @@ $rows       = $query->fetch_object();
                     Id Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="id_pengadaan" class="form-control" value="<?php echo $rows->id_pengadaan; ?>" />
+                    <input type="text" name="id_pengadaan" class="form-control" value="<?php echo $rows->ID_PENGADAAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -28,7 +28,7 @@ $rows       = $query->fetch_object();
                     Tanggal Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="date" name="tgl_pengadaan" class="form-control" value="<?php echo $rows->tgl_pengadaan; ?>" />
+                    <input type="date" name="tgl_pengadaan" class="form-control" value="<?php echo $rows->TGL_PENGADAAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -36,7 +36,7 @@ $rows       = $query->fetch_object();
                     Jumlah Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="jml_pengadaan" class="form-control" value="<?php echo $rows->jml_pengadaan; ?>" />
+                    <input type="text" name="jml_pengadaan" class="form-control" value="<?php echo $rows->JML_PENGADAAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">
@@ -44,7 +44,7 @@ $rows       = $query->fetch_object();
                     Sumber Pengadaan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="text" name="sumber_pengadaan" class="form-control" value="<?php echo $rows->sumber_pengadaan; ?>" />
+                    <input type="text" name="sumber_pengadaan" class="form-control" value="<?php echo $rows->SUMBER_PENGADAAN; ?>" />
                 </div>
             </div>
             <div class="mb-3">

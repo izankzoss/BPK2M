@@ -26,22 +26,23 @@ if (!isset($_GET['target'])) {
                 <div class="row">
                     <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card border-left-success shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                             Asset</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><h3><b><?php echo $total; ?></b></h3></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><h3><b><?php echo $total; ?></h3></b></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-briefcase fa-2x fas fa-briefcase-300"></i>
                                     </div>
                                     <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                     <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
@@ -73,8 +74,8 @@ if (!isset($_GET['target'])) {
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><h3><b><?php echo $total1; ?></h3></b></div>
                                                 </div>
-                                                <div class="col">
-                                                    
+                                                <div class="col-auto">
+   
                                                 </div>
                                             </div>
                                         </div>
