@@ -8,12 +8,10 @@ if (!isset($_GET['target'])) {
         $q = __ambil($db, "asset");
         $p = __ambil($db, "inspeksi");
         $s = __ambil($db, "pengadaan");
-        $n = __ambil($db, "pemusnahan");
         while ($r = $q->fetch_array()) {
             $total = mysqli_num_rows($q);
             $total2 = mysqli_num_rows($p);
             $total1 = mysqli_num_rows($s);
-            $total3 = mysqli_num_rows($n);
         } ?>
         <section class="content">
             <!-- Begin Page Content -->
@@ -44,7 +42,7 @@ if (!isset($_GET['target'])) {
                             </div>
                         </div>
                     </div>
-                     <!-- Earnings (Monthly) Card Example -->
+                    <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-info shadow h-100 py-2">
                             <div class="card-body">
@@ -91,29 +89,9 @@ if (!isset($_GET['target'])) {
                             </div>
                         </div>
                     </div>
-                    <!-- Pending Requests Card Example -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Pemusnahan</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <h3><b><?php echo $total3; ?></h3></b>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-trash fa-2x fas fa-trash-300"></i>
-                                    </div>
-                                    <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+    </div>
     </div>
     </section>
     <?php
