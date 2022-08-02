@@ -1,12 +1,18 @@
-<?php
-// mengaktifkan session pada php
-session_start();
-
+<?php  
 // menghubungkan php dengan koneksi database
+
+session_start();
+if(isset($_SESSION['JABATAN'])) { 
+  header('location:admin.php');
+} 
 include 'config/config_database.php';
 $db =__database();
 
+
 // menangkap data yang dikirim dari form login
+if (isset($_POST['login'])) {
+  # code...
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -21,33 +27,39 @@ if($cek > 0){
 
  $data = mysqli_fetch_array($login);
 
- // cek jika user login sebagai admin
- if($data['JABATAN']=="admin"){
 
+ // cek jika user login sebagai admin
+ if($data['JABATAN']=="user" ){
+
+   $_SESSION['id'] = $data['id'];
+  $_SESSION['user'] = $data['username'];
+  $_SESSION['nm_lengkap'] = $data['nm_lengkap'];
+  $_SESSION['JABATAN'] ="user";
+  header('location:users.php');
+ 
   // buat session login dan username
   
   // alihkan ke halaman dashboard admin
   
- // cek jika user login sebagai pegawai
- }else if($data['JABATAN']=="user"){
-  // buat session login dan username
-  
-  // alihkan ke halaman dashboard pegawai
-  header("location:users.php");
-
+ 
  }else if($data['JABATAN']=="admin"){
-  $_SESSION['username'] = $username;
-  $_SESSION['jabatan'] = "admin";
-  $_SESSION['masuk'] ='admin';
 
-  // alihkan ke halaman login kembali
-  header("location:index.php?pesan=gagal");
- } 
+  // buat session login dan username
+  $_SESSION['id'] = $data['id'];
+  $_SESSION['user'] = $data['username'];
+  $_SESSION['nm_lengkap'] = $data['nm_lengkap'];
+  $_SESSION['JABATAN'] ="admin";
+  header("location:index.php");
+  // alihkan ke halaman dashboard pegawai
+  
+
+ 
 }else{
-  $_SESSION['username'] = $username;
-  $_SESSION['jabatan'] = "user";
-  $_SESSION['masuk'] ='user';
- header("location:index.php?pesan=gagal");
+
 }
+
+}
+}
+
 
 ?>

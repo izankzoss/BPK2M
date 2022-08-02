@@ -40,7 +40,7 @@
     
 <form class="form-signin" method="POST" action="cekLogin.php">
   <div class="text-center mb-4">
-    <img class="mb-4" src="../BPK2M/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <img class="mb-4" src="../BPK2M/assets/brand/download.jpg" alt="logo" width="250" height="">
     <h1 class="h3 mb-3 font-weight-normal"> Selamat Datang</h1>
     <p>Silahkan Login untuk masuk.</a></p>
   </div>
