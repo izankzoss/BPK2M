@@ -66,10 +66,7 @@ $rows = $query->fetch_object();
                     <select name="id_instansi" id="id_instansi" class="form-select">
                         <option value="">Pilih Instansi</option>
                         <?php
-                        $where_instansi = [
-                            'ID_INSTANSI' => $_SESSION['id']
-                        ];
-                        $instansi_data = __ambil($db, "instansi", "*", $where_instansi);
+                        $instansi_data = __ambil($db, "instansi", "*");
                         while ($r = $instansi_data->fetch_array()) {
                         ?>
                             <option value="<?php echo $r['ID_INSTANSI']; ?>" <?php echo $rows->ID_INSTANSI == $r['NM_INSTANSI'] ? "selected" : ""; ?>> <?php echo $r['NM_INSTANSI']; ?> </option>
@@ -87,13 +84,10 @@ $rows = $query->fetch_object();
                     <select name="id_jenis" id="id_jenis" class="form-select">
                         <option value="">Pilih Jenis Asset</option>
                         <?php
-                        $where_jenis = [
-                            'ID_ASSET' => $_SESSION['id']
-                        ];
-                        $jenis_data = __ambil($db, "jenis_asset", "*", $where_jenis);
+                        $jenis_data = __ambil($db, "jenis_asset", "*");
                         while ($k = $jenis_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $k['ID_ASSET']; ?>" <?php echo $rows->ID_ASSET == $k['JENIS_ASSET'] ? "selected" : ""; ?>> <?php echo $r['JENIS_ASSET']; ?> </option>
+                            <option value="<?php echo $k['ID_ASSET']; ?>" <?php echo $rows->ID_ASSET == $k['JENIS_ASSET'] ? "selected" : ""; ?>> <?php echo $k['JENIS_ASSET']; ?> </option>
                         <?php
                         }
                         ?>
