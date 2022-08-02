@@ -28,15 +28,9 @@
             echo "<tr>
             <td>" . $no . "</td>
             <td>" . $r['USERNAME'] . "</td>
-<<<<<<< HEAD
             <td>" . $r['NM_LENGKAP'] . "</td>
             <td>" . $r['JABATAN'] . "</td>
             <td>" . $r['PASSWORD'] . "</td>
-=======
-            <td>" . $r['PASSWORD'] . "</td>
-            <td>" . $r['NM_LENGKAP'] . "</td>
-            <td>" . $r['JABATAN'] . "</td>
->>>>>>> 13f2acd19f842b02ded623b493ce3d485522d6bf
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=users&action=edit&id=" . $r['USERNAME'] . "'>
                 <i class='fa-solid fa-pen-to-square'>Edit</i>
