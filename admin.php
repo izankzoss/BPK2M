@@ -60,7 +60,7 @@ include "config/config_database.php";
         <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-atlas"></i>
+                    <i class="fas fa-briefcase "></i>
                     <span>Asset</span>
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -76,7 +76,7 @@ include "config/config_database.php";
           <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-atlas"></i>
+                    <i class="fas  fa-shopping-cart"></i>
                     <span>Pengadaan</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -90,7 +90,7 @@ include "config/config_database.php";
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethre"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-atlas"></i>
+                    <i class="fas fa-folder"></i>
                     <span>Inspeksi</span>
                 </a>
                 <div id="collapsethre" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -105,7 +105,7 @@ include "config/config_database.php";
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefour"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-atlas"></i>
+                    <i class="fas fa-trash"></i>
                     <span>Pemusnahan</span>
                 </a>
                 <div id="collapsefour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -135,7 +135,7 @@ include "config/config_database.php";
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'users' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=users">
-                    <i class="fa-solid fa-book"></i>User</a>
+                    <i class="fas fa-user"></i>User</a>
             </li>
         </ul>
         <!-- End of Sidebar -->
