@@ -27,7 +27,7 @@ $rows       = $query->fetch_object();
             </div>
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
-                    Keterangan Sebab
+                    Sebab
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <input type="text" name="ket_sebab" id="id_sebab" value="<?php echo $rows->ket_sebab; ?>" required="required" class="form-control col-md-7 col-xs-12">
