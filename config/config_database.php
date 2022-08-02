@@ -110,7 +110,6 @@ function __delete($sambung, $table, $where)
     }
 }
 
-//update prodi
 
 function __update($sambung, $table, $data, $where = null)
 {
