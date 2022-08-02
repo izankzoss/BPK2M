@@ -95,9 +95,9 @@ include "config/config_database.php";
                 <div id="collapsethre" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Inspeksi</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">Inspeksi</a>
                         <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan" aria-expanded="true" aria-controls="collapseTwo">Keadaan</a>
                         <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan" aria-expanded="true" aria-controls="collapseTwo">Perbaikan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">Inspeksi</a>
                     </div>
                 </div>
             </li>
