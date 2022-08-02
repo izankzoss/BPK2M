@@ -83,9 +83,59 @@ include "config/config_database.php";
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header" >Pengadaan</h6>
                         <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">Pengadaan</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">Jenis Pengadaan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pengadaan" aria-expanded="true" aria-controls="collapseTwo">Jenis Pengadaan</a>
                     </div>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethre"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-atlas"></i>
+                    <span>Inspeksi</span>
+                </a>
+                <div id="collapsethre" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" >Inspeksi</h6>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">Inspeksi</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'keadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=keadaan" aria-expanded="true" aria-controls="collapseTwo">Keadaan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan" aria-expanded="true" aria-controls="collapseTwo">Perbaikan</a> 
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefour"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-atlas"></i>
+                    <span>Pemusnahan</span>
+                </a>
+                <div id="collapsefour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" >Pemusnahan</h6>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan" aria-expanded="true" aria-controls="collapseTwo">Pemusnahan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'cara_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=cara_pemusnahan" aria-expanded="true" aria-controls="collapseTwo">Cara Pemusnahan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebeb_pemusnahan" aria-expanded="true" aria-controls="collapseTwo">Sebab Pemusnahan</a> 
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefaif"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-atlas"></i>
+                    <span>Laporan</span>
+                </a>
+                <div id="collapsefaif" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" >Laporan</h6>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'laporan_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=laporan_asset" aria-expanded="true" aria-controls="collapseTwo">Laporan Asset</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'laporan_pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=laporan_pengadaan" aria-expanded="true" aria-controls="collapseTwo">Laporan Pengadaan</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'laporan_inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=laporan_inspeksi" aria-expanded="true" aria-controls="collapseTwo">Laporan Inspeksi</a>
+                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'laporan_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=laporan_pemusnahan" aria-expanded="true" aria-controls="collapseTwo">Laporan Pemusnahan</a> 
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'user' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=user">
+                    <i class="fa-solid fa-book"></i>User</a>
             </li>
         </ul>
         <!-- End of Sidebar -->
