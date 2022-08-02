@@ -31,10 +31,10 @@
             <td>" . $r['KETERANGAN'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=jenis_asset&action=edit&id=" . $r['ID_ASSET'] . "'>
-                <i class='fa-solid fa-pen-to-square'></i>
+                <i class='fa-solid fa-pen-to-square'>Edit</i>
                 </a>
                 <a class='btn btn-danger btn-sm' href='admin.php?target=jenis_asset&action=delete&id=" . $r['ID_ASSET'] . "'>
-                <i class='fa-solid fa-trash'></i>
+                <i class='fa-solid fa-trash'>Hapus</i>
                 </a>
             </td>
         </tr>";

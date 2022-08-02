@@ -30,10 +30,17 @@
             <td>" . $r['TGL_PEMUSNAHAN'] . "</td>
             <td>" . $r['KET_PEMUSNAHAN'] . "</td>
             <td>
+<<<<<<< HEAD
                 <a class='btn btn-success btn-sm' href='admin.php?target=pemusnahan&action=edit&id=" . $r['ID_PEMUSNAHAN'] . "'>
                 <i class='fa-solid fa-pen-to-square'>Edit</i>
                 </a>
                 <a class='btn btn-danger btn-sm' href='admin.php?target=pemusnahan&action=delete&id=" . $r['ID_PEMUSNAHAN'] . "'>
+=======
+                <a class='btn btn-success btn-sm' href='admin.php?target=pemusnahan&action=edit&id=" . $r['id_pemusnahan'] . "'>
+                <i class='fa-solid fa-pen-to-square'>Edit</i>
+                </a>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=pemusnahan&action=delete&id=" . $r['id_pemusnahan'] . "'>
+>>>>>>> e489b9b4eff4f5a18f18390171bd5171b961970d
                 <i class='fa-solid fa-trash'>Hapus</i>
                 </a>
             </td>

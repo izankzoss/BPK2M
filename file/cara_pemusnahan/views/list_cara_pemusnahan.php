@@ -31,10 +31,10 @@ target=cara_pemusnahan&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><b
             <td>" . $r['KET_CARA'] . "</td>
         <td>
             <a class='btn btn-success btn-sm' href='admin.php?target=cara_pemusnahan&action=edit&id=" . $r['ID_CARA'] . "'>
-            <i class='fa-solid fa-pen-to-square'></i>
+            <i class='fa-solid fa-pen-to-square'>Edit</i>
             Edit</a> 
         <a class='btn btn-danger btn-sm' href='admin.php?target=cara_pemusnahan&action=delete&id=" . $r['ID_CARA'] . "'>
-        <i class='fa-solid fa-trash'></i>
+        <i class='fa-solid fa-trash'>Hapus</i>
         Hapus</a>
             </td>
             </tr>";
