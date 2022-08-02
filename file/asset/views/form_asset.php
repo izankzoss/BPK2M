@@ -110,10 +110,10 @@
                         <option value="">Pilih Pengadaan</option>
                         <?php
                         $db = __database();
-                        $jenis_data = __ambil($db, "pengadaan");
-                        while ($k = $jenis_data->fetch_array()) {
+                        $pengadaan_data = __ambil($db, "pengadaan");
+                        while ($k = $pengadaan_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $j['ID_PENGADAAN']; ?>"><?php echo $j['ID_PENGADAAN']; ?></option>
+                            <option value="<?php echo $k['ID_PENGADAAN']; ?>"><?php echo $k['ID_JENIS']; ?></option>
                         <?php
                         }
                         ?>

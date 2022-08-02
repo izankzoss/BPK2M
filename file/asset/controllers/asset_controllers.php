@@ -11,6 +11,7 @@ if ($opsi == "input") {
         'harga' => $_POST['harga'],
         'id_instansi' => $_POST['id_instansi'],
         'id_asset' => $_POST['id_asset'],
+        'id_pengadaan' => $_POST['id_pengadaan'],
         'tgl_terima' => $_POST['tgl_terima']
     ];
     $simpan = __simpan($db, "asset", $data);
