@@ -21,7 +21,7 @@ $rows = $query->fetch_object();
                     Perbaikan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="perbaikan" type="text" name="perbaikan" class="form-control" value="<?php echo $rows->perbaikan; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input  type="text" id="PERBAIKAN" name="PERBAIKAN" class="form-control" value="<?php echo $rows->PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -29,7 +29,7 @@ $rows = $query->fetch_object();
                     Keterangan
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="ket_perbaikan" type="text" name="ket_perbaikan" class="form-control" value="<?php echo $rows->ket_perbaikan; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input id="KET_PERBAIKAN" type="text" name="KET_PERBAIKAN" class="form-control" value="<?php echo $rows->KET_PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -37,7 +37,7 @@ $rows = $query->fetch_object();
                     Tanggal
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="tgl_perbaikan" type="date" name="tgl_perbaikan" class="form-control" value="<?php echo $rows->tgl_perbaikan; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input id="tgl_perbaikan" type="date" name="tgl_perbaikan" class="form-control" value="<?php echo $rows->TGL_PERBAIKAN; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
@@ -45,7 +45,7 @@ $rows = $query->fetch_object();
                     Biaya
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input id="biaya" type="text" name="biaya" class="form-control" value="<?php echo $rows->biaya; ?>" required="required" class="form-control col-md-7 col-xs-12">
+                    <input id="biaya" type="text" name="biaya" class="form-control" value="<?php echo $rows->BIAYA; ?>" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
             </div>
             <div class="mb-3">
