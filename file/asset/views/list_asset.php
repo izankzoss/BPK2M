@@ -44,8 +44,7 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
             <i class='fa-solid fa-pen-to-square'>Edit</i>
             Edit</a> 
         <a class='btn btn-danger btn-sm' href='admin.php?target=asset&action=delete&id=" . $r['NO_ASSET'] . "'>
-        <i class='fa-solid fa-trash'>Hapus</i>
-        Hapus</a>
+        <i class='fa-solid fa-trash'>Hapus</i></a>
             </td>
             </tr>";
             $no++;
