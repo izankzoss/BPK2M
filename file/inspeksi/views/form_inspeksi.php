@@ -14,7 +14,48 @@ $db = __database();
             <div class="col-md-6 col-sm-6 col-lg-12">
                 <input type="text" name="ID_INSPEKSI" class="form-control" />
             </div> 
-        </div> 
+        </div>
+        <div class="mb-3">
+                <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                   Keadaan
+                </label>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_keadaan" id="id_keadaan" class="form-select">
+                        <option value="">Pilih Keadaan</option>
+                        <?php
+                        $db = __database();
+                        $instansi_data = __ambil($db, "keadaan");
+                        while ($s = $instansi_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $s['ID_KEADAAN']; ?>"><?php echo $s['KEADAAN']; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+            <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                   Perbaikan
+                </label>
+            </div>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="id_perbaikan" id="id_perbaikan" class="form-select">
+                        <option value="">Pilih Perbaikan</option>
+                        <?php
+                        $db = __database();
+                        $instansi_data = __ambil($db, "perbaikan");
+                        while ($s = $instansi_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $s['ID_PERBAIKAN']; ?>"><?php echo $s['PERBAIKAN']; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
     <div class="mb-3">
             <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                Tanggal

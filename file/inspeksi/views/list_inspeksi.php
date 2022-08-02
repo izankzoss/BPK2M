@@ -13,6 +13,9 @@
         <tr>
             <th>No</th>
             <th>Id Inspeksi</th>
+            <th>Keadaan</th>
+            <th>Asset</th>
+            <th>Perbaikan</th>
             <th>Tanggal</th>
             <th>Pelaksana</th>
             <th>Action</th>
@@ -26,6 +29,9 @@
             echo "<tr>
             <td>" . $no . "</td>
             <td>" . $r['ID_INSPEKSI'] . "</td>
+            <td>" . $r['ID_KEADAAN'] . "</td>
+            <td>" . $r['ID_ASSET'] . "</td>
+            <td>" . $r['ID_PERBAIKAN'] . "</td>
             <td>" . $r['TGL_INSPEKSI'] . "</td>
             <td>" . $r['PELAKSANA'] . "</td>
             <td>
