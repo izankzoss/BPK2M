@@ -4,10 +4,11 @@ $opsi = $_GET['action'];
 //start input
 if ($opsi == "input") {
     $data = [
-        'username' => $_POST['username'],
+
         'password' => $_POST['password'],
         'nm_lengkap' => $_POST['nm_lengkap'],
-        'jabatan' => $_POST['jabatan']
+        'jabatan' => $_POST['jabatan'],
+        'username' => $_POST['username']
     ];
     $simpan = __simpan($db, "users", $data);
     if ($simpan) {
@@ -40,11 +41,11 @@ elseif ($opsi == "delete") {
 //end kondisi delete
 //start kondisi update
 elseif ($opsi == "update") {
-        $data = [
-            'password' => $_POST['password'],
-            'nm_lengkap' => $_POST['nm_lengkap'],
-            'jabatan' => $_POST['jabatan']
-        ];
+    $data = [
+        'password' => $_POST['password'],
+        'nm_lengkap' => $_POST['nm_lengkap'],
+        'jabatan' => $_POST['jabatan']
+    ];
     $where = [
         'username' => $_POST['id']
     ];

@@ -14,7 +14,7 @@ $rows       = $query->fetch_object();
         <h4>Form Pengadaan</h4>
     </div>
     <div class="card-body">
-        <form method="post" action="admin.php?target=pengadaan&action=input" data-parsley-validate class="form-horizontal form-label-left">
+        <form method="post" action="admin.php?target=pengadaan&action=update" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Id Pengadaan
@@ -52,7 +52,7 @@ $rows       = $query->fetch_object();
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
                         <i class="fa-solidfa-floppy-disk"></i> Simpan
                     </button>
-                    <a class="btn btn-danger btn-sm" href="admin.php?target=pengadaan"><i class="fa-solidfa-circle-arrow-left"></i>   Kembali</a>
+                    <a class="btn btn-danger btn-sm" href="admin.php?target=pengadaan"><i class="fa-solidfa-circle-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </form>

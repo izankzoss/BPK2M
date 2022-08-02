@@ -6,7 +6,7 @@
         <?php
         $db = __database();
         // buat header table
-        echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=id_asset&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
+        echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=jenis_asset&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
         <br><br>";
         echo "<div class='table-responsive'>";
         echo "<table class='table table-striped table-bordered'>
@@ -21,19 +21,19 @@
         </thead>
         <tbody>";
         // ambil data dari database
-        $q = __ambil($db, "jenis_asset", "*", null, $join);
+        $q = __ambil($db, "jenis_asset");
         $no = 1;
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['id_asset'] . "</td>
-            <td>" . $r['jenis_asset'] . "</td>
-            <td>" . $r['ket_asset'] . "</td>
+            <td>" . $r['ID_ASSET'] . "</td>
+            <td>" . $r['JENIS_ASSET'] . "</td>
+            <td>" . $r['KETERANGAN'] . "</td>
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=jenis_asset&action=edit&id=" . $r['id_asset'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=jenis_asset&action=edit&id=" . $r['ID_ASSET'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=jenis_asset&action=delete&id=" . $r['id_asset'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=jenis_asset&action=delete&id=" . $r['ID_ASSET'] . "'>
                 <i class='fa-solid fa-trash'></i>
                 </a>
             </td>
@@ -41,5 +41,5 @@
             $no++;
         }
         echo "</tbody></table></div>"; ?>
-        </div>
     </div>
+</div>

@@ -1,7 +1,7 @@
 <?php
 include "config/config_url.php";
 include "config/config_database.php";
- 
+
 
 ?>
 <!DOCTYPE html>
