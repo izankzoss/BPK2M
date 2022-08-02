@@ -27,7 +27,8 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
       <tr>
       <th>No</th>
       <th>No Asset</th>
-      <th>Nama Barang</th><th>Spesifikasi</th>
+      <th>Nama Barang</th>
+      <th>Spesifikasi</th>
       <th>jumlah</th>
       <th>Harga</th>
       <th>Total</th>

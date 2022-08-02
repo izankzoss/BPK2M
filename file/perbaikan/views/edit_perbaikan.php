@@ -1,7 +1,7 @@
 <?php
 $db = __database();
 $where = [
-    'ID_PERBAIKAN' => $_GET['id']
+    'id_perbaikan' => $_GET['id']
 ];
 $query = __ambil($db, "perbaikan", "*", $where);
 //menampilkasn hasil query
@@ -14,8 +14,8 @@ $rows = $query->fetch_object();
         <h4>Edit Perbaikan</h4>
     </div>
     <div class="card-body">
-        <form method="POST" action="admin.php?target=cara_pemusnahan&action=update" data-parsley-validate class="form-horizontal form-label-left">
-            <input type="hidden" name="id" value="<?php echo $rows->ID_PERBAIKAN; ?>">
+        <form method="POST" action="admin.php?target=perbaikan&action=update" data-parsley-validate class="form-horizontal form-label-left">
+            <input type="text" name="id" value="<?php echo $rows->ID_PERBAIKAN; ?>">
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Perbaikan

@@ -41,7 +41,7 @@ elseif ($opsi == "delete") {
 elseif ($opsi == "update") {
     $data = [
         'sebab' => $_POST['sebab'],
-        'ket_sebab' => $_POST['ket_keadaan']
+        'ket_sebab' => $_POST['ket_sebab']
     ];
     $where = [
         'id_sebab' => $_POST['id']

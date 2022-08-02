@@ -2,6 +2,7 @@
 include "config/config_url.php";
 include "config/config_database.php";
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,81 +55,76 @@ include "config/config_database.php";
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider"></hr>
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapsethree"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-briefcase"></i>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-briefcase "></i>
+                    <span>Instansi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset " aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-briefcase "></i>
+                    <span>Instansi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-atlas "></i>
                     <span>Asset</span>
                 </a>
-                <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Asset</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" >Asset</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" >Jenis Asset</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'instansi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=instansi" >Instansi</a>
-                    </div>
-                </div>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-folder"></i>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_asset" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-cubes"></i>
+                    <span>Jenis Asset</span>
+                </a>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-history"></i>
+                    <span>No Registrasi</span>
+                </a>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-layer-group "></i>
                     <span>Inspeksi</span>
                 </a>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Inspeksi</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" >Inspeksi</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'perbaikan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=perbaikan" >Perbaikan</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" >Pengadaan</a>
-                    </div>
-                </div>
-            </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" " data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas  fa-shopping-cart"></i>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-luggage-cart "></i>
                     <span>Pengadaan</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pengadaan</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'Pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" >Pengadaan</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'jenis_Pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=jenis_pengadaan" >Jenis Pengadaan</a>
-                    </div>
-                </div>
-            </li>
-                <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-trash"></i>
-                    <span>Pemusnahan</span>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-luggage-cart "></i>
+                    <span>Pengadaan</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pemusnahan</h6>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan" >Pemusnahan</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'sebab_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=sebab_pemusnahan" >Sebab Pemusnahan</a>
-                        <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'cara_pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=cara_pemusnahan" >Cara Pemusnahan</a>
-                    </div>
-                </div>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-luggage-cart "></i>
+                    <span>Pengadaan</span>
+                </a>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'users' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=users" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-user "></i>
-                    <span>Users</span>
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'registrasi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=registrasi" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-history"></i>
+                    <span>No Registrasi</span>
                 </a>
             </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-layer-group "></i>
+                    <span>Inspeksi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-luggage-cart "></i>
+                    <span>Pengadaan</span>
+                </a>
+            </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -183,7 +179,7 @@ include "config/config_database.php";
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ADMIN</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -201,7 +197,7 @@ include "config/config_database.php";
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<?php echo base_url(); ?>logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>

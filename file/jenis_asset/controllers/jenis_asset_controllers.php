@@ -41,7 +41,7 @@ elseif ($opsi == "delete") {
 elseif ($opsi == "update") {
     $data = [
         'jenis_asset' => $_POST['jenis_asset'],
-        'ket_asset' => $_POST['ket_asset']
+        'keterangan' => $_POST['keterangan']
     ];
     $where = [
         'id_asset' => $_POST['id']

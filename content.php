@@ -16,64 +16,143 @@ if (!isset($_GET['target'])) {
             $total3 = mysqli_num_rows($n);
         } ?>
         <section class="content">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-green">
-                        <div class="inner">
-                            <h3><?php echo $total; ?></h3>
-                            <p>Asset</p>
+            <<<<<<< HEAD <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <h3><?php echo $total; ?></h3>
+                                <p>Asset</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <a href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="icon">
-                            <i class="fa fa-user"></i>
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                            </div>
+                            <!-- Content Row -->
+                            <div class="row">
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-primary shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                        Asset</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <h3><b><?php echo $total; ?></b></h3>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-briefcase fa-2x fas fa-briefcase-300"></i>
+                                                </div>
+                                                <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'asset' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fa fa-cube"></i>
+                                    </div>
+                                    <a href="<?php echo base_url(); ?>admin.php?target=inspeksi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+
+                                </div>
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-success shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                        Inspeksi</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <h3><b><?php echo $total2; ?></h3></b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-folder fa-2x fas fa-folder-300"></i>
+                                                </div>
+                                                <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'inspeksi' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=inspeksi" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-info shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Pengadaan
+                                                    </div>
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                                <h3><b><?php echo $total1; ?></h3></b>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas  fa-shopping-cart fa-2x fas  fa-shopping-cart-300"></i>
+                                                </div>
+                                                <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'Pengadaan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pengadaan" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pending Requests Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-warning shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                        Pemusnahan</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <h3><b><?php echo $total3; ?></h3></b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-trash fa-2x fas fa-trash-300"></i>
+                                                </div>
+                                                <a class="collapse-item" class="nav-link <?php echo isset($_GET['target']) && $_GET['target'] == 'pemusnahan' ? "active" : ""; ?>" href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">Info lebih lanjut<i class="fa fa-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="<?php echo base_url(); ?>admin.php?target=pengadaan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
                         </div>
-                        <a href="<?php echo base_url(); ?>admin.php?target=asset" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3><?php echo $total3; ?></h3>
+                                    <p>Pemusnahan</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <a href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-aqua">
-                        <div class="inner">
-                            <h3><?php echo $total2; ?></h3>
-                            <p>Inspeksi</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-cube"></i>
-                        </div>
-                        <a href="<?php echo base_url(); ?>admin.php?target=inspeksi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-aqua">
-                        <div class="inner">
-                            <h3><?php echo $total1; ?></h3>
-                            <p>Pengadaan</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <a href="<?php echo base_url(); ?>admin.php?target=pengadaan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-aqua">
-                        <div class="inner">
-                            <h3><?php echo $total3; ?></h3>
-                            <p>Pemusnahan</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <a href="<?php echo base_url(); ?>admin.php?target=pemusnahan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
         </section>
         <?php
     } else {
+
         $target = $_GET['target'];
         if (empty($target)) {
         ?>

@@ -14,9 +14,9 @@
         <tr>
             <th>No</th>
             <th>Username</th>
-            <th>Password</th>
             <th>Nama Lengkap</th>
             <th>Jabatan</th>
+            <th>Password</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -27,15 +27,21 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['username'] . "</td>
-            <td>" . $r['password'] . "</td>
-            <td>" . $r['nm_lengkap'] . "</td>
-            <td>" . $r['jabatan'] . "</td>
+            <td>" . $r['USERNAME'] . "</td>
+<<<<<<< HEAD
+            <td>" . $r['NM_LENGKAP'] . "</td>
+            <td>" . $r['JABATAN'] . "</td>
+            <td>" . $r['PASSWORD'] . "</td>
+=======
+            <td>" . $r['PASSWORD'] . "</td>
+            <td>" . $r['NM_LENGKAP'] . "</td>
+            <td>" . $r['JABATAN'] . "</td>
+>>>>>>> 13f2acd19f842b02ded623b493ce3d485522d6bf
             <td>
-                <a class='btn btn-success btn-sm' href='admin.php?target=users&action=edit&id=" . $r['username'] . "'>
+                <a class='btn btn-success btn-sm' href='admin.php?target=users&action=edit&id=" . $r['USERNAME'] . "'>
                 <i class='fa-solid fa-pen-to-square'>Edit</i>
                 </a>
-                <a class='btn btn-danger btn-sm' href='admin.php?target=users&action=delete&id=" . $r['username'] . "'>
+                <a class='btn btn-danger btn-sm' href='admin.php?target=users&action=delete&id=" . $r['USERNAME'] . "'>
                 <i class='fa-solid fa-trash'>Hapus</i>
                 </a>
             </td>
@@ -43,5 +49,5 @@
             $no++;
         }
         echo "</tbody></table></div>"; ?>
-        </div>
     </div>
+</div>

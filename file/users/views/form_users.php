@@ -17,15 +17,19 @@ $db = __database();
             </div>
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+<<<<<<< HEAD
+                    Nama Lengkap
+=======
                     Password
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
-                    <input type="date" name="password" class="form-control" />
+                    <input type="password" name="password" class="form-control" />
                 </div>
             </div>
             <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Nama Lengkap 
+>>>>>>> 13f2acd19f842b02ded623b493ce3d485522d6bf
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <input type="integer" name="nm_lengkap" class="form-control" />
@@ -39,7 +43,14 @@ $db = __database();
                     <input type="text" name="jabatan" class="form-control" />
                 </div>
             </div>
-            
+            <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Password
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="text" name="password" class="form-control" />
+                </div>
+            </div>
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">

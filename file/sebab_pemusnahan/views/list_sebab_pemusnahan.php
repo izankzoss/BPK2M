@@ -25,9 +25,9 @@
         while ($r = $q->fetch_array()) {
             echo "<tr>
             <td>" . $no . "</td>
-            <td>" . $r['id_sebab'] . "</td>
-            <td>" . $r['sebab'] . "</td>
-            <td>" . $r['ket_sebab'] . "</td>
+            <td>" . $r['ID_SEBAB'] . "</td>
+            <td>" . $r['SEBAB'] . "</td>
+            <td>" . $r['KET_SEBAB'] . "</td>
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=sebab_pemusnahan&action=edit&id=" . $r['ID_SEBAB'] . "'>
                 <i class='fa-solid fa-pen-to-square'></i>

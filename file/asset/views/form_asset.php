@@ -57,13 +57,33 @@
                     <input type="text" name="harga" class="form-control" />
                 </div>
             </div>
-
             <div class="mb-3">
                 <label for="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
                     Tanggal Terima
                 </label>
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <input type="date" name="tgl_terima" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="first-name" class="control-label col-md-3 col-sm-3 col-lg-12">
+                    Semester
+                </label>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <select name="kd_semester" id="kd_semester" class="form-select">
+                        <option value="">Pilih Semester</option>
+                        <?php
+                        $db = __database();
+                        $semester_data = __ambil($db, "semester", "*", $where);
+                        while ($s = $semester_data->fetch_array()) {
+                        ?>
+                            <option value="<?php echo $s['kd_semester']; ?>"><?php echo $s['semester']; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="mb-3">
