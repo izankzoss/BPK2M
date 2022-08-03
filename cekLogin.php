@@ -4,7 +4,12 @@
 session_start();
 if(isset($_SESSION['JABATAN'])) { 
   header('location:admin.php');
-} 
+} else{
+  echo "<script>
+      alert('Maaf, Anda tidak memiliki akses ke sistem'); 
+  window.location.href='index.php';
+</script>";
+}
 include 'config/config_database.php';
 $db =__database();
 
@@ -49,12 +54,16 @@ if($cek > 0){
   $_SESSION['user'] = $data['username'];
   $_SESSION['nm_lengkap'] = $data['nm_lengkap'];
   $_SESSION['JABATAN'] ="admin";
-  header("location:index.php");
+   header('location:index.php');
+ 
   // alihkan ke halaman dashboard pegawai
-  
-
  
 }else{
+  echo "<script>
+      alert('Maaf, Anda tidak memiliki akses ke sistem'); 
+  window.location.href='indek.php';
+</script>";
+
 
 }
 
