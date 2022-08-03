@@ -148,12 +148,11 @@ include "config/config_database.php";
                                 </form>
                             </div>
                         </li>
-                        <!-- Nav Item - User Information -->
-                            <div class="d-flex">
-                        <a href="<?php echo base_url(); ?>logout.php" class="btn btn-sm btn-danger">
-                    <i class="fa-solid fa-right-from-bracket"></i>Logout
-                </a>
-            </div>
+                        <div class="d-flex">
+                            <a href="<?php echo base_url(); ?>logout.php" class="btn btn-sm btn-danger">
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                        </div>
+                        </li>
                     </ul>
                 </nav>
                 <!-- End of Topbar -->

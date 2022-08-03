@@ -16,6 +16,14 @@ $rows       = $query->fetch_object();
     <div class="card-body">
         <form method="post" action="admin.php?target=pengadaan&action=update" data-parsley-validate class="form-horizontal form-label-left">
             <div class="mb-3">
+                <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first-name">
+                    Id Pengadaan
+                </label>
+                <div class="col-md-6 col-sm-6 col-lg-12">
+                    <input type="text" name="id_pengadaan" class="form-control" value="<?php echo $rows->ID_PENGADAAN; ?>" />
+                </div>
+            </div>
+            <div class="mb-3">
                 <label class="control-label col-md-3 col-sm-3 col-lg-12" for="first_name">
                     Jenis Pengadaan
                 </label>
