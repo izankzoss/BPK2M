@@ -154,9 +154,7 @@ include "config/config_database.php";
                     <i class="fa-solid fa-right-from-bracket"></i>Logout
                 </a>
             </div>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
                 <div class="clearfix">&nbsp;</div>
