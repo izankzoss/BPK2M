@@ -47,16 +47,16 @@ elseif ($opsi == "delete") {
 //start update
 elseif ($opsi == "update") {
     $data = [
-        'NM_BARANG' => $_POST['NM_BARANG'],
-        'SPESIFIKASI' => $_POST['SPESIFIKASI'],
-        'JUMLAH' => $_POST['JUMLAH'],
-        'HARGA' => $_POST['HARGA'],
-        'ID_INSTANSI' => $_POST['ID_INSTANSI'],
-        'ID_ASSET' => $_POST['ID_ASSET'],
-        'TGL_TERIMA' => $_POST['TGL_TERIMA']
+        'nm_barang' => $_POST['nm_barang'],
+        'spesifikasi' => $_POST['spesifikasi'],
+        'jumlah' => $_POST['jumlah'],
+        'harga' => $_POST['harga'],
+        'id_instansi' => $_POST['id_instansi'],
+        'id_asset' => $_POST['id_asset'],
+        'tgl_terima' => $_POST['tgl_terima']
     ];
     $where = [
-        'no_asset' => $_POST['id']
+        'NO_ASSET' => $_POST['id']
     ];
     $update = __update($db, "asset", $data, $where);
     if ($update) {
