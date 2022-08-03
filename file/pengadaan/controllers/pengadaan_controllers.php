@@ -46,7 +46,7 @@ elseif ($opsi == "update") {
         'tgl_pengadaan' => $_POST['tgl_pengadaan']
     ];
     $where = [
-        'ID_PENGADAAN' => $_POST['id']
+        'id_pengadaan' => $_POST['id']
     ];
     $update = __update($db, "pengadaan", $data, $where);
     if ($update) {

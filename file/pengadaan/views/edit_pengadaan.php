@@ -34,7 +34,7 @@ $rows       = $query->fetch_object();
                         $pengadaan_data = __ambil($db, "jenis_pengadaan", "*");
                         while ($p = $pengadaan_data->fetch_array()) {
                         ?>
-                            <option value="<?php echo $p['ID_PENGADAAN']; ?>" <?php echo $rows->ID_INSTANSI == $p['JENIS_PENGADAAN'] ? "selected" : ""; ?>> <?php echo $p['JENIS_PENGADAAN']; ?> </option>
+                            <option value="<?php echo $p['ID_JENIS']; ?>" <?php echo $rows->ID_JENIS == $p['JENIS_PENGADAAN'] ? "selected" : ""; ?>> <?php echo $p['JENIS_PENGADAAN']; ?> </option>
                         <?php
                         }
                         ?>
@@ -67,7 +67,7 @@ $rows       = $query->fetch_object();
                     <input type="date" name="tgl_pengadaan" class="form-control" value="<?php echo $rows->TGL_PENGADAAN; ?>" />
                 </div>
             </div>
-            
+
             <div class="mb-3">
                 <div class="col-md-6 col-sm-6 col-lg-12">
                     <button type="submit" class="btn btn-success btn-sm" id="simpan" name="simpan">
