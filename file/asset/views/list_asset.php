@@ -14,7 +14,7 @@ target=asset&action=form'><i class='fa-solid fa-plus'></i>Tambah</a><br><br>";
         echo "<table class='table table-striped table-bordered'>
       <thead>
       <tr>
-      <th>No</th>
+      <th >No</th>
       <th>No Asset</th>
       <th>Nama Barang</th>
       <th>Spesifikasi</th>

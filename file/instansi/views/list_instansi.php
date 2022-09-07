@@ -9,14 +9,31 @@
         echo "<a class='btn btn-info btn-sm text-light' href='admin.php?target=instansi&action=form'><i class='fa-solid fa-plus'></i> Tambah</a>
         <br><br>";
         echo "<div class='table-responsive'>";
-        echo "<table class='table table-striped table-bordered'>
+        echo "<table  class='table table-striped table-bordered'>
         <thead>
         <tr>
-            <th>No</th>
-            <th>Id Intansi</th>
+            <th rowspan=\"2\"><center>No</center></th>
+            <th colspan=\"3\">op</th>
+            <th colspan=\"3\">modal</th>
+            
+        </tr>
+        <tr>
+          
+        
             <th>Nama Instansi</th>
             <th>Keterangan</th>
             <th>Action</th>
+
+            <th>Kimia</th>
+            <th>Fisika</th>
+            <th>Biologi</th>
+            <th>Biologi</th>
+           
+           
+            
+            
+            
+      
         </tr>
         </thead>
         <tbody>";
@@ -25,10 +42,16 @@
         $no = 1;
         while ($r = $q->fetch_array()) {
             echo "<tr>
-            <td>" . $no . "</td>
-            <td>" . $r['ID_INSTANSI'] . "</td>
-            <td>" . $r['NM_INSTANSI'] . "</td>
-            <td>" . $r['KET_INSTANSI'] . "</td>
+            <td> " . $no . "</td>
+            <td>jk</td>
+            <td>jjj</td>
+            <td>jjj</td>
+            <td>jjj</td>
+            <td>jjj</td>
+            <td>jjj</td>
+            
+           
+           
             <td>
                 <a class='btn btn-success btn-sm' href='admin.php?target=instansi&action=edit&id=" . $r['ID_INSTANSI'] . "'>
                 <i class='fa-solid fa-pen-to-square'>Edit</i>
@@ -37,7 +60,8 @@
                 <i class='fa-solid fa-trash'>Hapus</i>
                 </a>
             </td>
-        </tr>";
+            </tr>";
+        
             $no++;
         }
         echo "</tbody></table></div>"; ?>
